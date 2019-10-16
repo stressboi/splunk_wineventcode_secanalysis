@@ -46,7 +46,7 @@ access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 7.3.1.1
-modtime = 1571180338.195342000
+modtime = 1571254380.416290000
 
 [views/recommended_events_table]
 access = read : [ * ], write : [ admin ]
@@ -60,7 +60,7 @@ access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 7.3.1.1
-modtime = 1571180415.204589000
+modtime = 1571254551.905586000
 
 [views/recommended_events_treemap]
 access = read : [ * ], write : [ admin ]
@@ -100,7 +100,7 @@ access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 7.3.1.1
-modtime = 1571198785.948854000
+modtime = 1571254870.298328000
 
 [nav/default]
 version = 7.3.1.1

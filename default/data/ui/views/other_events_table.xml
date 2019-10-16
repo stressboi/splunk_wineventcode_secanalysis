@@ -68,7 +68,7 @@
         <option name="totalsRow">false</option>
         <option name="wrap">true</option>
         <drilldown>
-          <link target="_blank">/app/splunk_wineventcode_analysis/individual_event_code_analysis?form.ec_token=$click.value2$</link>
+          <link target="_blank">/app/splunk_wineventcode_secanalysis/individual_event_code_analysis?form.ec_token=$click.value2$</link>
         </drilldown>
       </table>
     </panel>

@@ -1,21 +1,21 @@
 ﻿ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidance_cim_tagged,ec_guidance_fortuna,ec_guidance_gough,ec_guidance_ms,ec_guidance_nsa,ec_guidance_other,ec_guidance_lombardi,ec_guidance_sans_forensics,observed_volume,duplicate_possible
 0,System,Information,System or Sysmon,1,System Time Changed or Sysmon Process Start,System Integrity,0,0,0,0,1,0,0,0,In Development,1
-0,Setup,Information,Setup,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,2,A process changed a file creation time,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,4,Sysmon service state changed,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,In Development,0
+0,Setup,Information,Setup,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,2,A process changed a file creation time,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,4,Sysmon service state changed,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,In Development,1
 0,System,Information,System or Sysmon,6,New Kernel Filter Driver or Driver Loaded,Software and Service Installation,0,0,0,0,1,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,In Development,0
+0,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,11,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API,0,0,0,0,1,0,0,0,In Development,1
 0,System,Information,System or Sysmon,12,Windows Startup or Registry Object Create or Delete,Boot Events,0,0,0,0,1,0,0,0,In Development,1
 0,System,Information,System or Sysmon,13,Windows Shutdown or Registry Value Set,Boot Events,0,0,0,0,1,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,15,File Create Stream Hash,Sysmon,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,In Development,0
+0,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,15,File Create Stream Hash,Sysmon,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,In Development,1
 0,Windows Update or Sysmon,Information,System or Sysmon,18,Windows Update Ready or Pipe Event Connected,Update,1,0,1,0,0,0,0,0,In Development,1
 0,Windows Update or Sysmon,Information,System or Sysmon,19,Windows Update Installed or WmiEventFilter activity Detected,Update,1,0,1,0,1,0,0,0,In Development,1
 0,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Error,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,20,Windows Update Failed or WmiEventConsumer activity detected,Windows Update Errors,0,0,0,0,1,0,0,0,In Development,1

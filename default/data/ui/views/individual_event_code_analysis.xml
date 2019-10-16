@@ -11,8 +11,8 @@
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-1mon@mon</earliest>
-        <latest>@mon</latest>
+        <earliest>1564617600</earliest>
+        <latest>1567296000</latest>
       </default>
     </input>
     <input type="multiselect" token="source_token">
@@ -129,6 +129,20 @@
         <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
         <option name="refresh.display">progressbar</option>
         <option name="underLabel">MITRE ATT&amp;CK FRAMEWORK?</option>
+      </single>
+    </panel>
+      <panel>
+      <single>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | rename duplicate_possible as ISDUPE | eval ISDUPERESPONSE=if(ISDUPE=1,"YES","NO") | table ISDUPERESPONSE</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">POSSIBLE DUPLICATE?</option>
       </single>
     </panel>
   </row>

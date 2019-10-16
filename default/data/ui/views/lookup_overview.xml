@@ -1,4 +1,4 @@
-<form hideFilters="false">
+<form hideFilters="true">
   <label>Lookup Overview</label>
   <description>Select one or more Authorities using the filter</description>
   <fieldset submitButton="false">
