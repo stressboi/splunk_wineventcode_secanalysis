@@ -1,0 +1,130 @@
+<form>
+  <label>Individual Host Analysis</label>
+  <search id="baseSearch">
+    <query>
+      ($index_token$) (sourcetype=$sourcetype_sel$) host=$selectedhost$ | fields *
+    </query>
+    <earliest>$field1.earliest$</earliest>
+    <latest>$field1.latest$</latest>
+  </search>
+  <fieldset submitButton="true" autoRun="false">
+    <input type="time" token="field1">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="multiselect" token="source_token">
+      <label>Sources</label>
+      <fieldForLabel>source</fieldForLabel>
+      <fieldForValue>source</fieldForValue>
+      <search>
+        <query>| metadata type=sources index=* |stats count by source | search (source=WinEventLog* OR source=XmlWinEvent*)</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <valuePrefix>source="</valuePrefix>
+      <delimiter> OR </delimiter>
+      <valueSuffix>"</valueSuffix>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+    </input>
+    <input type="multiselect" token="index_token">
+      <label>Indexes</label>
+      <valuePrefix>index=</valuePrefix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>index</fieldForLabel>
+      <fieldForValue>index</fieldForValue>
+      <search>
+        <query>| tstats values(sourcetype) where index=* group by index | table index</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+    </input>
+    <input type="text" token="selectedhost">
+      <label>Host</label>
+      <default>BTUN-L</default>
+    </input>
+    <input type="radio" token="sourcetype_sel" searchWhenChanged="true">
+      <label>Sourcetype</label>
+      <choice value="wineventlog*">wineventlog</choice>
+      <choice value="xmlwineventlog*">xmlwineventlog</choice>
+      <default>wineventlog*</default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <chart>
+        <search base="baseSearch">
+          <query>| timechart count by EventCode usenull=f</query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search base="baseSearch">
+          <query>| eval rawlen=len(_raw)| lookup WindowsEventCodes EventCode | stats sum(rawlen) as bytes,values(ec_guidance*) as ec_guidance*, count, values(sourcetype) as sourcetype, values(EventDescription) as EventDescription by EventCode | fields - ec_guidance_cim_tagged  | addtotals ec_guidance* as totec | eval MB=bytes/1024/1024 | fields - bytes,ec_guidance* | eval "Recommended?"=if(Total&gt;0,"YES","NO") | fields - Total | sort - MB</query>
+        </search>
+        <option name="count">10</option>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+        <format type="number" field="MB"></format>
+        <format type="color" field="Recommended?">
+          <colorPalette type="map">{"YES":#53A051,"NO":#DC4E41}</colorPalette>
+        </format>
+        <drilldown>
+          <link target="_blank">/app/splunk_wineventcode_secanalysis/individual_event_code_analysis?form.ec_token=$click.value2$</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <search base="baseSearch">
+          <query> | stats dc(EventCode) as EventCode</query>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="underLabel">DIFFERENT EVENT CODES SEEN IN TIME SELECTED</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search base="baseSearch">
+          <query> | eval rawlen=len(_raw) | stats sum(rawlen) as bytes| eval MB=bytes/1024/1024 | fields MB</query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">MB SEEN FROM THIS HOST IN TIME SELECTED</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search base="baseSearch">
+          <query>| stats count as "Number of Events",values(source) as source values(index) as indexes by sourcetype</query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</form>

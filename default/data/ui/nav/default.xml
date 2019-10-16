@@ -1,0 +1,16 @@
+<nav search_view="search">
+  <view name="start" default='true' />
+  <collection label="Table Analysis">
+    <view name="recommended_events_table" />
+    <view name="other_events_table" />
+  </collection>
+   <collection label="Treemap Analysis">
+    <view name="recommended_events_treemap" />
+    <view name="other_events_treemap" />
+  </collection>
+  <collection label="Individual Analyzers">
+    <view name="individual_event_code_analysis" />
+    <view name="individual_host_analysis" />
+  </collection>
+  <view name="search" />
+</nav>

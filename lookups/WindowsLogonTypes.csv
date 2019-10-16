@@ -1,0 +1,11 @@
+Logon_Type,Logon_Type_Description,Logon_Type_Comment
+0,SystemInternalLogin,
+2,Interactive,Hands On Keyboard
+3,Network,
+4,Batch,Associated with Scheduled Task
+5,Service,
+7,Unlock,
+8,NetworkClearText,
+9,RunAs,
+10,RDP,
+11,CachedInteractive,

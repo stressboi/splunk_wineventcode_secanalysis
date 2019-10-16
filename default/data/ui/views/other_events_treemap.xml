@@ -1,0 +1,78 @@
+<form>
+  <label>Other Events Treemap</label>
+  <description>Which events are not recommended for security, but we are collecting them anyway?</description>
+  <fieldset submitButton="true" autoRun="false">
+    <input type="time" token="field1">
+      <label></label>
+      <default>
+        <earliest>1564617600</earliest>
+        <latest>1567296000</latest>
+      </default>
+    </input>
+    <input type="text" token="minhost_token" searchWhenChanged="true">
+      <label>At Least This Many Hosts</label>
+      <default>1</default>
+    </input>
+    <input type="multiselect" token="source_token">
+      <label>Sources</label>
+      <fieldForLabel>source</fieldForLabel>
+      <fieldForValue>source</fieldForValue>
+      <search>
+        <query>| metadata type=sources index=* |stats count by source | search (source=WinEventLog* OR source=XmlWinEvent*)</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <valuePrefix>source="</valuePrefix>
+      <delimiter> OR </delimiter>
+      <valueSuffix>"</valueSuffix>
+      <choice value="*">ALL</choice>
+    </input>
+    <input type="multiselect" token="index_token">
+      <label>Indexes</label>
+      <valuePrefix>index=</valuePrefix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>index</fieldForLabel>
+      <fieldForValue>index</fieldForValue>
+      <search>
+        <query>| tstats values(sourcetype) where index=* group by index | table index</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <viz type="treemap_app.treemap">
+        <search>
+          <query>($index_token$) (sourcetype=wineventlog*) ($source_token$)
+| stats dc(host) as NumHosts, values(source) as Source,count by EventCode
+| inputlookup append=t WindowsEventCodes.csv
+| stats values(*) as * by EventCode
+| addtotals ec_*
+| rename Total as "NumRecommenders"
+| fillnull value="0" NumHosts,NumRecommenders
+| fillnull value="Not in Lookup"
+| fields - ec*
+| sort - NumHosts
+| rename Source as Level1, EventCode as Level2, count as eventcount
+| search ((NumRecommenders=0) AND (NumHosts&gt;=$minhost_token$))
+| table Level1,Level2,eventcount</query>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="refresh.display">progressbar</option>
+        <option name="treemap_app.treemap.colorMode">categorical</option>
+        <option name="treemap_app.treemap.maxCategories">500</option>
+        <option name="treemap_app.treemap.maxColor">#3fc77a</option>
+        <option name="treemap_app.treemap.minColor">#d93f3c</option>
+        <option name="treemap_app.treemap.numOfBins">6</option>
+        <option name="treemap_app.treemap.showLabels">true</option>
+        <option name="treemap_app.treemap.showLegend">false</option>
+        <option name="treemap_app.treemap.showTooltip">true</option>
+        <option name="treemap_app.treemap.useColors">true</option>
+        <option name="treemap_app.treemap.useZoom">true</option>
+      </viz>
+    </panel>
+  </row>
+</form>

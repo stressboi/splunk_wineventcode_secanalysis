@@ -1,0 +1,192 @@
+<form>
+  <label>Individual Event Code Analysis</label>
+  <search id="baseSearch">
+    <query>
+      ($index_token$) (sourcetype=$sourcetype_sel$) EventCode=$ec_token$
+    </query>
+    <earliest>$field1.earliest$</earliest>
+    <latest>$field1.latest$</latest>
+  </search>
+  <fieldset submitButton="true" autoRun="false">
+    <input type="time" token="field1">
+      <label></label>
+      <default>
+        <earliest>-1mon@mon</earliest>
+        <latest>@mon</latest>
+      </default>
+    </input>
+    <input type="multiselect" token="source_token">
+      <label>Sources</label>
+      <fieldForLabel>source</fieldForLabel>
+      <fieldForValue>source</fieldForValue>
+      <search>
+        <query>| metadata type=sources index=* |stats count by source | search (source=WinEventLog* OR source=XmlWinEvent*)</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <valuePrefix>source="</valuePrefix>
+      <delimiter> OR </delimiter>
+      <valueSuffix>"</valueSuffix>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+    </input>
+    <input type="multiselect" token="index_token">
+      <label>Indexes</label>
+      <valuePrefix>index=</valuePrefix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>index</fieldForLabel>
+      <fieldForValue>index</fieldForValue>
+      <search>
+        <query>| tstats values(sourcetype) where index=* group by index | table index</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+    </input>
+    <input type="text" token="ec_token">
+      <label>Event Code</label>
+      <default>4688</default>
+    </input>
+    <input type="radio" token="sourcetype_sel" searchWhenChanged="true">
+      <label>Sourcetype</label>
+      <choice value="wineventlog*">wineventlog</choice>
+      <choice value="xmlwineventlog*">xmlwineventlog</choice>
+      <default>wineventlog*</default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <chart>
+        <search base="baseSearch">
+          <query>| timechart count by host</query>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">all</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <search base="baseSearch">
+          <query>| stats dc(host) as hosts</query>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">HOSTS WITH THIS EVENT CODE</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | eval cim=if(ec_guidance_cim_tagged=1,"YES","NO") | table cim</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">TAGGED SOMEWHERE IN CIM?</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search base="baseSearch">
+          <query>| eval rawlen=len(_raw) | stats sum(rawlen) as bytes| eval MB=bytes/1024/1024 | fields MB</query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">MB SEEN FROM THIS EVENT IN TIME SELECTED</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search base="baseSearch">
+          <query>|eval rawlen=len(_raw) | stats sum(rawlen) as bytes,dc(host) as totalhosts| eval MB=bytes/1024/1024| eval perhost=MB/totalhosts | fields perhost</query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">AVG MB SEEN PER HOST IN TIME SELECTED</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | rename ATT&amp;CK as AT | eval ATTACK=if(AT=1,"YES","NO") | table ATTACK</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="underLabel">MITRE ATT&amp;CK FRAMEWORK?</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields - ec_guidance_cim_tagged |addtotals ec_guidance* | table EventCode,"Event Log",EventDescription,Total | sort -Total | rename Total as "Number of Recommendations",EventCode as "Event Code",EventDescription as "Event Description"</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <table>
+        <search base="baseSearch">
+          <query>| stats dc(host) as "Number of Hosts",count as "Number of Events",values(source) as source values(index) as indexes by sourcetype</query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance" |transpose |rename column as Authority| rename "row 1" as "Recommend" | eval "Recommends?"=if(Recommend==1,"YES","NO") | fields - Recommend</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <format type="color" field="Recommends?">
+          <colorPalette type="map">{"NO":#AF575A,"YES":#53A051}</colorPalette>
+        </format>
+      </table>
+    </panel>
+  </row>
+</form>

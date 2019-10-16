@@ -1,0 +1,81 @@
+<form>
+  <label>Recommended Events Table</label>
+  <description>Which events exist in my data that are recommended by various authorities to collect?</description>
+  <fieldset submitButton="true" autoRun="false">
+    <input type="time" token="field1">
+      <label></label>
+      <default>
+        <earliest>1564617600</earliest>
+        <latest>1567296000</latest>
+      </default>
+    </input>
+    <input type="text" token="minrec_token" searchWhenChanged="true">
+      <label>At Least This Many Authorities</label>
+      <default>3</default>
+    </input>
+    <input type="text" token="minhost_token" searchWhenChanged="true">
+      <label>At Least This Many Hosts</label>
+      <default>1</default>
+    </input>
+    <input type="multiselect" token="source_token">
+      <label>Sources</label>
+      <fieldForLabel>source</fieldForLabel>
+      <fieldForValue>source</fieldForValue>
+      <search>
+        <query>| metadata type=sources index=* |stats count by source | search (source=WinEventLog* OR source=XmlWinEvent*)</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <valuePrefix>source="</valuePrefix>
+      <delimiter> OR </delimiter>
+      <valueSuffix>"</valueSuffix>
+      <choice value="*">ALL</choice>
+    </input>
+    <input type="multiselect" token="index_token">
+      <label>Indexes</label>
+      <valuePrefix>index=</valuePrefix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>index</fieldForLabel>
+      <fieldForValue>index</fieldForValue>
+      <search>
+        <query>| tstats values(sourcetype) where index=* group by index | table index</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>($index_token$) (sourcetype=wineventlog*) ($source_token$)
+| stats dc(host) as NumHosts, values(source) as Source by EventCode
+| inputlookup append=t WindowsEventCodes.csv
+| stats values(*) as * by EventCode
+| addtotals ec_*
+| rename Total as "NumRecommenders"
+| fillnull value="0" NumHosts,NumRecommenders
+| fillnull value="Not in Data" Source
+| fillnull value="Not in Lookup"
+| fields - ec*
+| sort - NumHosts
+| search ((NumRecommenders&gt;$minrec_token$) AND (NumHosts&gt;=$minhost_token$))</query>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <drilldown>
+          <link target="_blank">/app/splunk_wineventcode_secanalysis/individual_event_code_analysis?form.ec_token=$click.value2$</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+</form>
