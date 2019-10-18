@@ -1,11 +1,11 @@
 <form>
   <label>Recommended Events Treemap</label>
   <fieldset submitButton="true" autoRun="false">
-  <input type="time" token="field1">
+    <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>1564617600</earliest>
-        <latest>1567296000</latest>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
       </default>
     </input>
     <input type="text" token="minrec_token" searchWhenChanged="true">

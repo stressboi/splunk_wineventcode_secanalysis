@@ -52,22 +52,22 @@ modtime = 1571254380.416290000
 access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
-version = 7.3.1.1
-modtime = 1571180388.058544000
+version = 7.2.8
+modtime = 1571411956.676365000
 
 [views/other_events_table]
 access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
-version = 7.3.1.1
-modtime = 1571254551.905586000
+version = 7.2.8
+modtime = 1571412025.322645000
 
 [views/recommended_events_treemap]
 access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
-version = 7.3.1.1
-modtime = 1570594343.731340000
+version = 7.2.8
+modtime = 1571412072.969802000
 
 [views/other_events_treemap]
 access = read : [ * ], write : [ admin ]
@@ -99,8 +99,8 @@ modtime = 1570054253.400715000
 access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
-version = 7.3.1.1
-modtime = 1571254870.298328000
+version = 7.2.8
+modtime = 1571411919.119626000
 
 [nav/default]
 version = 7.3.1.1
@@ -114,8 +114,8 @@ version = 7.3.0
 modtime = 1570075283.991476000
 
 [app/install/install_source_checksum]
-version = 7.3.1.1
-modtime = 1570079503.697988000
+version = 7.2.8
+modtime = 1571411853.213417000
 
 [views/start]
 owner = admin

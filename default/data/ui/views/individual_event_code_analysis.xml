@@ -11,8 +11,8 @@
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>1564617600</earliest>
-        <latest>1567296000</latest>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
       </default>
     </input>
     <input type="multiselect" token="source_token">
@@ -131,7 +131,7 @@
         <option name="underLabel">MITRE ATT&amp;CK FRAMEWORK?</option>
       </single>
     </panel>
-      <panel>
+    <panel>
       <single>
         <search>
           <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | rename duplicate_possible as ISDUPE | eval ISDUPERESPONSE=if(ISDUPE=1,"YES","NO") | table ISDUPERESPONSE</query>
