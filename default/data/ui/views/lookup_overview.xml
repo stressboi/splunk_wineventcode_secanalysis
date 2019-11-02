@@ -10,12 +10,14 @@
       <choice value="ec_guidance_fortuna=1">Andrea Fortuna</choice>
       <choice value="ec_guidance_lombardi=1">Mike Lombardi</choice>
       <choice value="ec_guidance_nsa=1">NSA</choice>
+      <choice value="ec_guidance_jpcert=1">JP-CERT</choice>
+      <choice value="ec_guidance_huntersforge_ossem=1">Huntersforge OSSEM</choice>
       <choice value="ec_guidance_other=1">Other</choice>
       <delimiter> OR </delimiter>
       <change>
         <eval token="numselected">mvcount(split($authority_token$,"OR"))</eval>
       </change>
-      <initialValue>ec_guidance_ms=1,ec_guidance_gough=1,ec_guidance_sans_forensics=1,ec_guidance_fortuna=1,ec_guidance_lombardi=1,ec_guidance_nsa=1,ec_guidance_other=1</initialValue>
+      <initialValue>ec_guidance_ms=1,ec_guidance_gough=1,ec_guidance_sans_forensics=1,ec_guidance_fortuna=1,ec_guidance_lombardi=1,ec_guidance_nsa=1,ec_guidance_huntersforge_ossem=1,ec_guidance_jpcert=1,ec_guidance_other=1</initialValue>
       <default>ec_guidance_gough=1</default>
     </input>
   </fieldset>
