@@ -1,0 +1,235 @@
+.panel-body {
+    background: #f2f4f5;
+}
+.floatleft {
+    position: relative;
+    float: left;
+}
+.floatright {
+    position: relative;
+    float: right;
+}
+.clearboth {
+    clear: both;
+}
+
+#ListOfPageGuides {
+    display:none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+#ListOfPageGuidesFirstEntry {
+    display:flex;
+}
+
+#ListOfPageGuidesFirstEntry .PageGuide {
+    width: 318px;
+    margin: 5px;
+    border:1px solid #e1e6eb;
+    background:white;
+    min-height:200px;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    display: inline-block;
+}
+
+#ListOfPageGuidesFirstEntry .PageGuide.lastSelected {
+    border:1px solid orange;
+}
+
+#ListOfPageGuidesFirstEntry .PageGuideImg {
+    font-size: 75px;
+    color: rgb(92, 192, 92);
+    display: inline-block;
+    width: 60px;
+    flex: 0 0 auto;
+    vertical-align: super;
+    height: 0.6575em;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#ListOfPageGuidesFirstEntry .PageGuideDescription {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    margin-left: 20px;
+    text-align: left;
+    min-height: 200px;
+}
+
+
+
+.BodyStyles {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    display: table;
+}
+.active .BodyStyles {
+    /* background-color:rgb(236, 248, 255) */
+}
+.activated a:not(.active) {
+    background: rgba(255, 255, 255, 0.0);
+}
+
+.PageGuide {
+    width: auto;
+    margin: 5px;
+    border:1px solid #DCE1E6;
+    background:white;
+    min-height:80px;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 260px;
+    transition: height 0.2s,width 0.2s,min-width 0.2s,max-width 0.2s,margin 0.2s,box-shadow 0.2s,border-color 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+
+}
+.PageGuide2 {
+    width: auto;
+    border:1px solid #e1e6eb;
+    background:white;
+    min-height:80px;
+    margin: 5px;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    display: flex;
+    transition: height 0.2s,width 0.2s,min-width 0.2s,max-width 0.2s,margin 0.2s,box-shadow 0.2s,border-color 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+
+}
+.PageGuide:hover,.PageGuide2:hover {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    background-color:rgb(236, 248, 255);
+    text-decoration:none;
+}
+#ListOfPageGuidesFirstEntry .PageGuide:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    text-decoration:none;
+}
+
+.PageGuide h2,.PageGuide2 h2 {
+    line-height: 20px;
+    color:#006eaa !important;
+}
+.HeadingStyles a:link {
+    text-decoration: none;
+}
+
+.PageGuideImg {
+    font-size: 75px;
+    color: rgb(92, 192, 92);
+    display: inline-block;
+    width: 80px;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    height: 0.6575em;
+    display:none;
+}
+
+.PageGuideDescription {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
+#PageGuideDrilldown ul,.PageGuideDescription ul, .tooltip ul {
+  list-style-position: outside;
+
+}
+.tooltip ul {
+    list-style-position: outside;
+    margin: 10px 0 10px 10px;
+}
+.tooltip {
+    font-weight:normal !important;
+}
+.tooltip .tooltip-inner{
+    text-align: left;
+    width:220px;
+    max-width:220px;
+}
+#PageGuideDrilldown {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 50px;
+
+}
+#PageGuideDrillDownTitle {
+    display:none;
+}
+#PageGuideContent {
+    background: white;
+    min-height: 400px;
+    padding: 5px;
+    margin: 5px;
+    display:none;
+}
+
+.DrillDownBox {
+    display:none;
+    flex-grow: 1;
+    flex-basis: 260px;
+    width: auto;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+}
+.ContentBox {
+    display:none;
+    padding: 0 10px 0 10px;
+}
+#DemoModeSwitch {
+    text-align: right;
+}
+
+
+.UseCase {
+    display: inline-block;
+    width: 480px;
+    height: 225px;
+    border: solid gray 1px;
+    /*margin: 15px;*/
+    overflow: hidden;
+    clear: both;
+    position: relative;
+}
+
+.UseCase h2 {
+    line-height: 20px;
+}
+
+.UseCaseImg {
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    position: absolute;
+    float: left;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right: 10px;
+    line-height: 150px;
+    text-align: center;
+}
+
+.UseCaseDescription {
+    /*display: block;*/
+    position: absolute;
+    left: 145px;
+    top: 0;
+    width: 320px;
+    height: 225px;
+    overflow: hidden;
+}
