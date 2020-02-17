@@ -52,7 +52,7 @@
     <panel>
       <viz type="treemap_app.treemap">
         <search>
-          <query>($index_token$) (sourcetype=wineventlog*) ($source_token$)
+          <query>($index_token$) (sourcetype=*wineventlog*) ($source_token$)
 | stats dc(host) as NumHosts, values(source) as Source,count by EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
