@@ -46,7 +46,7 @@
     </input>
     <input type="text" token="selectedhost">
       <label>Host</label>
-      <default></default>
+      <default>*</default>
     </input>
     <input type="radio" token="sourcetype_sel" searchWhenChanged="true">
       <label>Sourcetype</label>
