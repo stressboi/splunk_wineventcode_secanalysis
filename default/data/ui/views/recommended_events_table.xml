@@ -48,7 +48,7 @@
     <panel>
       <table>
         <search>
-          <query>($index_token$) (sourcetype=wineventlog*) ($source_token$)
+          <query>($index_token$) (source=WinEventLog* OR source=XmlWinEvent*) ($source_token$)
 | stats dc(host) as NumHosts, values(source) as Source by EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
