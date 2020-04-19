@@ -57,6 +57,7 @@
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*
+| eval Total=Total-1
 | rename Total as "NumRecommenders"
 | fillnull value="0" NumHosts,NumRecommenders
 | fillnull value="Not in Lookup"

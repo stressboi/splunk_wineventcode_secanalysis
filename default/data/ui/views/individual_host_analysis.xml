@@ -2,7 +2,7 @@
   <label>Individual Host Analysis</label>
   <search id="baseSearch">
     <query>
-      ($index_token$) (sourcetype=$sourcetype_sel$) host=$selectedhost$ EventCode>0 | fields *
+      ($index_token$) (sourcetype=$sourcetype_sel$) host=$selectedhost$ EventCode&gt;0| fields *
     </query>
     <earliest>$field1.earliest$</earliest>
     <latest>$field1.latest$</latest>

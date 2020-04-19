@@ -1,577 +1,583 @@
-ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidance_cim_tagged,ec_guidance_fortuna,ec_guidance_gough,ec_guidance_ms,ec_guidance_nsa,ec_guidance_other,ec_guidance_lombardi,ec_guidance_huntersforge_ossem,ec_guidance_jpcert,ec_guidance_sans_forensics,observed_volume,duplicate_possible
-0,System or Sysmon,Information,System or Sysmon,1,System Time Changed or Sysmon Process Start,System Integrity,0,0,0,0,1,0,0,0,1,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,1,0,In Development,1
-0,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,4,Sysmon service state changed,Sysmon,0,0,0,0,0,0,0,0,1,0,In Development,1
-0,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,6,New Kernel Filter Driver or Driver Loaded,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,1,0,In Development,1
-0,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,1,0,In Development,1
-0,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,11,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,12,Windows Startup or Registry Object Create or Delete,Boot Events,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,13,Windows Shutdown or Registry Value Set,Boot Events,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,15,File Create Stream Hash,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,18,Windows Update Ready or Pipe Event Connected,Update,1,0,1,0,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,19,Windows Update Installed or WmiEventFilter activity Detected,Update,1,0,1,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Error,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,20,Windows Update Failed or WmiEventConsumer activity detected,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,21,WmiEventConsumerToFilter activity Detected,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,22,DNS Event,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,24,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Application,25,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,31,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,34,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-USB-USBHUB3-Analytic,Information,Microsoft-Windows-USB-USBHUB3-Analytic,43,New Device Information,External Media Detection,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Bits-Client,Information,Microsoft-Windows-Bits-Client,60,Bits Client,Bits Client,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,70,Private Key Accessed,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,80,Processing of a request,,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,81,Sending the request for operation Get to destination host and port,,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,90,X.509 Object,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Security,Information,System,104,The Application or System log was cleared,Clearing Event Logs,0,0,1,0,1,0,0,0,1,0,In Development,1
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,106,New Task Registered,Task Scheduler Activities,0,0,0,0,1,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,129,Created,Task Scheduler,0,0,1,0,0,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,132,WSMan operation Identify completed successfully,,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,141,Deleted,Task Scheduler,0,0,1,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,142,Task Disabled,Task Scheduler Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,143,Received the response from Network layer),,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,166,The chosen authentication mechanism is Negotiate,,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Powershell,Information,Powershell,169,Remote Connection,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,200,Task Launched,Task Scheduler Activities,0,0,0,0,1,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,201,The operation has been completed,Task Scheduler Activities,0,0,0,0,0,0,0,0,1,0,In Development,0
-0,System,Warning,System,219,Failed Kernel Driver Loading,System Integrity,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Sysmon,Information,Sysmon,255,Sysmon Error,Sysmon,0,0,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,256,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,257,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-LSA/Operational,Information,Microsoft-Windows-LSA/Operational,300,Group Assigned to new Session,Account Usage,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-PrintService/Operational,Information,Microsoft-Windows-PrintService/Operational,307,Printing Document,Printing Services,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,400,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,410,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-ApplicationExperience-Program-Telemetry,Information,Microsoft-Windows-ApplicationExperience-Program-Telemetry,500,Compatibility fix applied,,0,0,0,0,0,0,0,0,1,0,In Development,0
-0,Powershell,Information,Powershell,800,Get-MessageTrackingLog cmdlet,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,High,1
-0,Application,Warning,Application,865,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Warning,Application,866,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Warning,Application,867,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Warning,Application,868,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Warning,Application,882,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,903,New Application Installation,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,904,New Application Installation,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,905,Updated Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,906,Updated Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,907,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,908,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1000,An antimalware scan started.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,In Development,1
-1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1001,An antimalware scan finished.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1002,An antimalware scan was stopped before it finished.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1005,An antimalware scan failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,1006,The antimalware engine found malware or other potentially unwanted software.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1007,The antimalware platform performed an action to protect your system from malware or other potentially unwanted software.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1008,"The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed.",Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1009,The antimalware platform restored an item from quarantine.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1010,The antimalware platform could not restore an item from quarantine.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Information,Application,1022,New MSI File Installed,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Information,Application,1023,New MSI File Installed,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-TerminalServices-RDPClient/Operational,Information,Microsoft-Windows-TerminalServices-RDPClient/Operational,1024,Outbound TS Connect Attempt,Network Policy Server,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Information,Application,1033,New MSI File Installed,Software and Service Installation,0,0,1,0,1,0,0,0,0,0,In Development,0
-0,Windows Installer,Information,Installer,1034,Windows Installer removed the product,Installer,0,0,1,0,0,0,0,0,0,0,In Development,0
-0,User32,Warning,User32,1074,Shutdown Initiate Failed,Boot Events,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Security,Information,Security,1100,Event Log Service Shutdown,Clearing Event Logs,1,1,0,0,1,0,0,0,0,0,In Development,0
-0,Security,Error,Security,1101,Audit events have been dropped by the transport,Windows Audit,1,1,0,0,0,0,0,0,0,0,In Development,0
-0,Security,Information,Security,1102,The audit log was cleared,Clearing Event Logs,1,1,1,0,1,0,0,0,0,0,In Development,0
-0,Security,Information,Security,1104,The security log is now full,Windows Audit,1,1,0,0,0,0,0,0,0,0,In Development,0
-0,Security,Information,Security,1105,Event log automatic backup,Windows Audit,1,1,0,0,0,0,0,0,0,0,In Development,0
-0,Security,Information,Security,1108,The event logging service encountered an error,Windows Audit,1,1,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,1116,Detected Malware,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1117,Malware Removed,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1118,Malware Removal Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1119,Malware Removal Fatal Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1125,Event when Network protection fires in Audit-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1126,Event when Network protection fires in Block-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-GroupPolicy,Error,System,1129,Group Policy Application Failed due to Connectivity,Group Policy Errors,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Error,Application,1511,Temp Profile Logon,Account Usage,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Application,Error,Application,1518,Create Profile Failed,Account Usage,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,2001,The antimalware definition update failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,2003,The antimalware engine update failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,2004,There was a problem loading antimalware definitions. The antimalware engine will attempt to load the last-known good set of definitions.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Error,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,2009,Firewall Failed to load Group Policy,Windows Firewall,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Information,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,2033,Firewall Rules Deleted,Windows Firewall,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3001,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,3002,Real-Time Protection failed,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3003,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3004,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,3008,DNS Query Complete,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3010,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,3020,DNS Response Complete,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3023,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,In Development,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4100,System Error,Executing Pipeline,0,0,1,0,0,0,0,0,0,0,In Development,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4101,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4102,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4103,Module Logging,Powershell,0,0,1,0,1,0,0,0,0,0,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4104,Script Block Logging,Powershell,0,0,1,0,1,0,1,0,0,0,In Development,0
-0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4105,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4106,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,System,Information,System,4608,Windows is starting up.,Security State Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4609,Windows is shutting down.,Security State Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4610,An authentication package has been loaded by the Local Security Authority.,Security System Extension,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4611,A trusted logon process has been registered with the Local Security Authority.,Security System Extension,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4612,"Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.",System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4614,A notification package has been loaded by the Security Account Manager.,Security System Extension,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4615,Invalid use of LPC port.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4616,The system time was changed.,Security State Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4618,A monitored security event pattern has occurred.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4621,Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.,Security State Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,4622,A security package has been loaded by the Local Security Authority.,Security System Extension,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Logon/Logoff,Information,Security,4624,An account was successfully logged on.,Logon,1,1,1,1,1,0,1,1,1,1,In Development,0
-1,Logon/Logoff,Information,Security,4625,An account failed to log on.,Logon,1,1,1,1,1,0,1,1,0,1,In Development,1
-0,Logon/Logoff,Information,Security,4626,User/Device claims information.,Logon,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4627,Group membership information.,Group Membership,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4634,An account was logged off.,Logoff,1,1,0,1,1,0,1,0,1,0,In Development,0
-0,Logon/Logoff,Information,Security,4646,IKE DoS-Prevention mode started,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4647,User initiated logoff,Logoff,1,1,0,1,0,0,0,0,0,1,In Development,0
-1,Logon/Logoff,Information,Security,4648,A logon was attempted using explicit credentials.,Logon,1,1,1,1,1,0,0,1,1,0,In Development,0
-0,Logon/Logoff,Information,Security,4649,A replay attack was detected.,Other Logon/Logoff Events,0,1,0,1,0,0,1,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4650,An IPsec Main Mode security association was established. Extended Mode was not enabled. Certificate authentication was not used.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4651,An IPsec Main Mode security association was established. Extended Mode was not enabled. A certificate was used for authentication.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4652,An IPsec Main Mode negotiation failed.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4653,An IPsec Main Mode negotiation failed.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4654,An IPsec Quick Mode negotiation failed.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4655,An IPsec Main Mode security association ended.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Object Access,Information,Security,4656,A handle to an object was requested.,Handle Manipulation,1,1,1,1,0,0,0,1,1,0,In Development,0
-1,Object Access,Information,Security,4657,A registry value was modified.,Registry,0,1,1,1,1,0,1,1,0,0,In Development,0
-1,Object Access,Information,Security,4658,The handle to an object was closed.,Handle Manipulation,1,1,0,1,0,0,0,1,1,0,In Development,0
-0,Object Access,Information,Security,4659,A handle to an object was requested with intent to delete.,SAM,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Object Access,Information,Security,4660,An object was deleted.,SAM,0,1,0,1,0,0,0,1,1,0,In Development,0
-1,Object Access,Information,Security,4661,A handle to an object was requested.,SAM,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,DS Access,Information,Security,4662,An operation was performed on an object.,Directory Service Access,0,1,1,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,4663,An attempt was made to access an object.,Kernel,0,1,1,1,0,0,0,1,1,0,High,0
-1,Object Access,Information,Security,4664,An attempt was made to create a hard link.,File System,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,Object Access,Information,Security,4665,An attempt was made to create an application client context.,Application Generated,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4666,An application attempted an operation:,Application Generated,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4667,An application client context was deleted.,Application Generated,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4668,An application was initialized.,Application Generated,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Policy Change,Information,Security,4670,Permissions on an object were changed.,Subcategory (special),0,0,0,1,0,0,0,1,0,0,In Development,0
-0,Object Access,Information,Security,4671,An application attempted to access a blocked ordinal through the TBS.,Other Object Access Events,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Privilege Use,Information,Security,4672,Special privileges assigned to new logon.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,1,0,0,0,1,0,In Development,0
-1,Privilege Use,Information,Security,4673,A privileged service was called.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,0,0,0,1,1,0,In Development,0
-1,Privilege Use,Information,Security,4674,An operation was attempted on a privileged object.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,0,1,0,0,0,1,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4675,SIDs were filtered.,Logon,0,0,0,1,0,0,0,0,0,0,In Development,0
-1,Detailed Tracking,Information,Security,4688,A new process has been created.,Process Creation,1,0,1,1,1,0,1,1,1,0,In Development,0
-1,Detailed Tracking,Information,Security,4689,A process has exited.,Process Termination,1,0,0,1,1,0,1,1,1,0,In Development,0
-0,Object Access,Information,Security,4690,An attempt was made to duplicate a handle to an object.,Handle Manipulation,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4691,Indirect access to an object was requested.,Other Object Access Events,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,4692,Backup of data protection master key was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,4693,Recovery of data protection master key was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,4694,Protection of auditable protected data was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,4695,Unprotection of auditable protected data was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,4696,A primary token was assigned to process.,Process Creation,1,0,0,1,0,0,0,0,0,0,In Development,0
-1,System,Information,Security,4697,A service was installed in the system.,Security System Extension,0,0,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,4698,A scheduled task was created.,Other Object Access Events,0,0,1,1,0,0,1,1,1,0,In Development,0
-1,Object Access,Information,Security,4699,A scheduled task was deleted.,Other Object Access Events,0,0,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,4700,A scheduled task was enabled.,Other Object Access Events,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,4701,A scheduled task was disabled.,Other Object Access Events,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,4702,A scheduled task was updated.,Other Object Access Events,0,1,1,1,0,0,0,1,0,0,In Development,0
-0,Policy Change,Information,Security,4703,A user right was adjusted.,Authorization Policy Change,0,1,1,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4704,A user right was assigned.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4705,A user right was removed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4706,A new trust was created to a domain.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4707,A trust to a domain was removed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4709,IPsec Services was started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4710,IPsec Services was disabled.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4711,PAStore Engine Event,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4712,IPsec Services encountered a potentially serious failure.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4713,Kerberos policy was changed.,Authentication Policy Change,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4714,Encrypted data recovery policy was changed.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4715,The audit policy (SACL) on an object was changed.,Audit Policy Change,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4716,Trusted domain information was modified.,Authentication Policy Change,0,1,0,1,1,0,0,0,0,0,In Development,0
-1,Policy Change,Information,Security,4717,System security access was granted to an account.,Authentication Policy Change,1,1,0,1,0,0,0,1,0,0,In Development,0
-1,Policy Change,Information,Security,4718,System security access was removed from an account.,Authentication Policy Change,1,1,0,1,0,0,0,1,0,0,In Development,0
-0,Policy Change,Information,Security,4719,System audit policy was changed.,Audit Policy Change,1,1,1,1,1,0,1,0,0,0,In Development,0
-1,Account Management,Information,Security,4720,A user account was created.,User Account Management,1,1,0,1,1,0,0,1,1,1,In Development,0
-1,Account Management,Information,Security,4722,A user account was enabled.,User Account Management,1,1,0,1,1,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4723,An attempt was made to change an account's password.,User Account Management,1,1,0,1,0,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4724,An attempt was made to reset an account's password.,User Account Management,1,1,0,1,0,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4725,A user account was disabled.,User Account Management,1,1,0,1,1,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4726,A user account was deleted.,User Account Management,1,1,0,1,1,0,0,1,0,1,In Development,0
-0,Account Management,Information,Security,4727,A security-enabled global group was created.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4728,A member was added to a security-enabled global group.,Security Group Management,0,1,0,1,1,0,0,0,0,1,In Development,0
-0,Account Management,Information,Security,4729,A member was removed from a security-enabled global group.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4730,A security-enabled global group was deleted.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4731,A security-enabled local group was created.,Security Group Management,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4732,A member was added to a security-enabled local group.,Security Group Management,0,1,0,1,1,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4733,A member was removed from a security-enabled local group.,Security Group Management,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4734,A security-enabled local group was deleted.,Security Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4735,A security-enabled local group was changed.,Security Group Management,0,1,0,1,1,0,0,1,0,0,In Development,0
-0,Account Management,Information,Security,4737,A security-enabled global group was changed.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4738,A user account was changed.,User Account Management,1,1,0,1,0,0,0,1,0,1,In Development,0
-0,Policy Change,Information,Security,4739,Domain Policy was changed.,Authentication Policy Change,1,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4740,A user account was locked out.,User Account Management,1,1,0,1,1,0,0,1,0,1,In Development,0
-1,Account Management,Information,Security,4741,A computer account was created.,Computer Account Management,1,1,0,1,1,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4742,A computer account was changed.,Computer Account Management,1,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4743,A computer account was deleted.,Computer Account Management,1,1,0,1,0,0,0,1,0,0,In Development,0
-0,Account Management,Information,Security,4744,A security-disabled local group was created.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4745,A security-disabled local group was changed.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4746,A member was added to a security-disabled local group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4747,A member was removed from a security-disabled local group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4748,A security-disabled local group was deleted.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4749,A security-disabled global group was created.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4750,A security-disabled global group was changed.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4751,A member was added to a security-disabled global group.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,Account Management,Information,Security,4752,A member was removed from a security-disabled global group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4753,A security-disabled global group was deleted.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,Account Management,Information,Security,4754,A security-enabled universal group was created.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4755,A security-enabled universal group was changed.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4756,A member was added to a security-enabled universal group.,Security Group Management,0,1,0,1,1,0,0,0,0,1,In Development,0
-0,Account Management,Information,Security,4757,A member was removed from a security-enabled universal group.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4758,A security-enabled universal group was deleted.,Security Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4759,A security-disabled universal group was created.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4760,A security-disabled universal group was changed.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4761,A member was added to a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4762,A member was removed from a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4763,A security-disabled universal group was deleted.,Distribution Group Management,0,1,0,0,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4764,A group’s type was changed.,Security Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,Account Management,Information,Security,4765,SID History was added to an account.,User Account Management,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4766,An attempt to add SID History to an account failed.,User Account Management,0,1,0,1,1,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4767,A user account was unlocked.,User Account Management,1,1,0,1,1,0,0,1,0,1,In Development,0
-1,Account Logon,Information,Security,4768,A Kerberos authentication ticket (TGT) was requested.,Kerberos Authentication Service,1,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Logon,Information,Security,4769,A Kerberos service ticket was requested.,Kerberos Service Ticket Operations,1,1,1,1,1,0,0,1,1,0,In Development,0
-1,Account Logon,Information,Security,4770,A Kerberos service ticket was renewed.,Kerberos Service Ticket Operations,1,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Logon,Information,Security,4771,Kerberos pre-authentication failed.,Kerberos Authentication Service,1,1,1,1,0,0,0,1,0,0,In Development,0
-0,Account Logon,Information,Security,4772,A Kerberos authentication ticket request failed.,Kerberos Authentication Service,1,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Logon,Information,Security,4773,A Kerberos service ticket request failed.,Kerberos Authentication Service,1,1,0,1,1,0,0,1,0,0,In Development,0
-0,Account Logon,Information,Security,4774,An account was mapped for logon.,Credential Validation,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4775,An account could not be mapped for logon.,Credential Validation,1,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Logon,Information,Security,4776,The domain controller attempted to validate the credentials for an account.,Credential Validation,1,1,0,1,1,0,0,1,0,0,In Development,0
-0,Account Logon,Information,Security,4777,The domain controller failed to validate the credentials for an account.,Credential Validation,1,1,0,1,0,0,0,0,0,0,In Development,0
-1,Logon/Logoff,Information,Security,4778,A session was reconnected to a Window Station.,Other Logon/Logoff Events,1,1,0,1,1,0,0,1,0,1,In Development,0
-1,Logon/Logoff,Information,Security,4779,A session was disconnected from a Window Station.,Other Logon/Logoff Events,1,1,0,1,1,0,0,1,0,1,In Development,0
-0,Account Management,Information,Security,4780,The ACL was set on accounts which are members of administrators groups.,User Account Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4781,The name of an account was changed:,User Account Management,0,1,0,1,1,0,0,1,0,1,In Development,0
-0,Account Management,Information,Security,4782,The password hash an account was accessed.,Other Account Management Events,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4783,A basic application group was created.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4784,A basic application group was changed.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4785,A member was added to a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4786,A member was removed from a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4787,A non-member was added to a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4788,A non-member was removed from a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4789,A basic application group was deleted.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4790,An LDAP query group was created.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4791,A basic application group was changed.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4792,An LDAP query group was deleted.,Application Group Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4793,The Password Policy Checking API was called.,Other Account Management Events,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4794,An attempt was made to set the Directory Services Restore Mode.,User Account Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4797,An attempt was made to query the existence of a blank password for an account.,User Account Management,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Account Management,Information,Security,4798,A user's local group membership was enumerated.,User Account Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Account Management,Information,Security,4799,A security-enabled local group membership was enumerated.,Security Group Management,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Logon/Logoff,Information,Security,4800,The workstation was locked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,1,0,1,In Development,0
-1,Logon/Logoff,Information,Security,4801,The workstation was unlocked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,1,0,1,In Development,0
-0,Logon/Logoff,Information,Security,4802,The screen saver was invoked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,0,0,1,In Development,0
-0,Logon/Logoff,Information,Security,4803,The screen saver was dismissed.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,1,In Development,0
-0,System,Information,Security,4816,RPC detected an integrity violation while decrypting an incoming message.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4817,Auditing settings on an object were changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4818,Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy,Central Access Policy Staging,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4819,Central Access Policies on the machine have been changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4820,A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions.,Kerberos Authentication Service,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4821,"A Kerberos service ticket was denied because the user, device, or both does not meet the access control restrictions.",Kerberos Service Ticket Operations,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4822,NTLM authentication failed because the account was a member of the Protected User group.,Credential Validation,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4823,NTLM authentication failed because access control restrictions are required.,Credential Validation,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Logon,Information,Security,4824,Kerberos preauthentication by using DES or RC4 failed because the account was a member of the Protected User group.,Kerberos Authentication Service,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4825,A user was denied the access to Remote Desktop.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4826,Boot Configuration Data loaded.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,4830,SID History was removed from an account.,User Account Management,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4864,A namespace collision was detected.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4865,A trusted forest information entry was added.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4866,A trusted forest information entry was removed.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4867,A trusted forest information entry was modified.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4868,The certificate manager denied a pending certificate request.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4869,Certificate Services received a resubmitted certificate request.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4870,Certificate Services revoked a certificate.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4871,Certificate Services received a request to publish the certificate revocation list (CRL).,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4872,Certificate Services published the certificate revocation list (CRL).,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4873,A certificate request extension changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4874,One or more certificate request attributes changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4875,Certificate Services received a request to shut down.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4876,Certificate Services backup started.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4877,Certificate Services backup completed.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4878,Certificate Services restore started.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4879,Certificate Services restore completed.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4880,Certificate Services started.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4881,Certificate Services stopped.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4882,The security permissions for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4883,Certificate Services retrieved an archived key.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4884,Certificate Services imported a certificate into its database.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4885,The audit filter for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4886,Certificate Services received a certificate request.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4887,Certificate Services approved a certificate request and issued a certificate.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4888,Certificate Services denied a certificate request.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4889,Certificate Services set the status of a certificate request to pending.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4890,The certificate manager settings for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4891,A configuration entry changed in Certificate Services.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4892,A property of Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4893,Certificate Services archived a key.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4894,Certificate Services imported and archived a key.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4895,Certificate Services published the CA certificate to Active Directory Domain Services.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4896,One or more rows have been deleted from the certificate database.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4897,Role separation enabled,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4898,Certificate Services loaded a template.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4899,A Certificate Services template was updated.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4900,Certificate Services template security was updated.,Certification Services,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4902,The Per-user audit policy table was created.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4904,An attempt was made to register a security event source.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4905,An attempt was made to unregister a security event source.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4906,The CrashOnAuditFail value has changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4907,Auditing settings on object were changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4908,Special Groups Logon table modified.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4909,The local policy settings for the TBS were changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4910,The group policy settings for the TBS were changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4911,Resource attributes of the object were changed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4912,Per User Audit Policy was changed.,Audit Policy Change,1,1,0,1,0,0,1,0,0,0,In Development,0
-0,Policy Change,Information,Security,4913,Central Access Policy on the object was changed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4928,An Active Directory replica source naming context was established.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4929,An Active Directory replica source naming context was removed.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4930,An Active Directory replica source naming context was modified.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4931,An Active Directory replica destination naming context was modified.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4932,Synchronization of a replica of an Active Directory naming context has begun.,Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4933,Synchronization of a replica of an Active Directory naming context has ended.,Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4934,Attributes of an Active Directory object were replicated.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4935,Replication failure begins.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4936,Replication failure ends.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,4937,A lingering object was removed from a replica.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4944,The following policy was active when the Windows Firewall started.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4945,A rule was listed when the Windows Firewall started.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4946,A change has been made to Windows Firewall exception list. A rule was added.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,1,0,In Development,0
-0,Policy Change,Information,Security,4947,A change has been made to Windows Firewall exception list. A rule was modified.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4948,A change has been made to Windows Firewall exception list. A rule was deleted.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4949,Windows Firewall settings were restored to the default values.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4950,A Windows Firewall setting has changed.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4951,A rule has been ignored because its major version number was not recognized by Windows Firewall.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4952,Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4953,A rule has been ignored by Windows Firewall because it could not parse the rule.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4954,Windows Firewall Group Policy settings have changed. The new settings have been applied.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4956,Windows Firewall has changed the active profile.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4957,Windows Firewall did not apply the following rule:,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,4958,Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer:,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,4960,"IPsec dropped an inbound packet that failed an integrity check. If this problem persists, it could indicate a network issue or that packets are being modified in transit to this computer. Verify that the packets sent from the remote computer are the same as those received by this computer. This error might also indicate interoperability problems with other IPsec implementations.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,4961,"IPsec dropped an inbound packet that failed a replay check. If this problem persists, it could indicate a replay attack against this computer.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,4962,IPsec dropped an inbound packet that failed a replay check. The inbound packet had too low a sequence number to ensure it was not a replay.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,4963,IPsec dropped an inbound clear text packet that should have been secured. This is usually due to the remote computer changing its IPsec policy without informing this computer. This could also be a spoofing attack attempt.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4964,Special groups have been assigned to a new logon.,Special Logon,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,4965,"IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI). This is usually caused by malfunctioning hardware that is corrupting packets. If these errors persist, verify that the packets sent from the remote computer are the same as those received by this computer. This error may also indicate interoperability problems with other IPsec implementations. In that case, if connectivity is not impeded, then these events can be ignored.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4976,"During Main Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4977,"During Quick Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4978,"During Extended Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4979,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4980,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4981,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4982,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4983,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4984,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,4985,The state of a transaction has changed.,File System,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,5008,Unexpected Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,System,Information,System,5024,The Windows Firewall Service has started successfully.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,System,Information,System,5025,The Windows Firewall Service has been stopped.,Other System Events,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,System,Error,System,5027,The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,5028,The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,5029,The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,5030,The Windows Firewall Service failed to start.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,System,Information,System,5031,The Windows Firewall Service blocked an application from accepting incoming connections on the network.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,System,Information,System,5032,Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,5033,The Windows Firewall Driver has started successfully.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,System,Information,System,5034,The Windows Firewall Driver has been stopped.,Other System Events,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,System,Error,System,5035,The Windows Firewall Driver failed to start.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,5037,The Windows Firewall Driver detected critical runtime error. Terminating.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Security,Information,Security,5038,Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error.,System Integrity,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5039,A registry key was virtualized.,Registry,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5040,A change has been made to IPsec settings. An Authentication Set was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5041,A change has been made to IPsec settings. An Authentication Set was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5042,A change has been made to IPsec settings. An Authentication Set was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5043,A change has been made to IPsec settings. A Connection Security Rule was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5044,A change has been made to IPsec settings. A Connection Security Rule was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5045,A change has been made to IPsec settings. A Connection Security Rule was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5046,A change has been made to IPsec settings. A Crypto Set was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5047,A change has been made to IPsec settings. A Crypto Set was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5048,A change has been made to IPsec settings. A Crypto Set was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5049,An IPsec Security Association was deleted.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5050,An attempt to programmatically disable the Windows Firewall was rejected because this API is not supported on Windows Vista.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5051,A file was virtualized.,File System,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5056,A cryptographic self test was performed.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5057,A cryptographic primitive operation failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5058,Key file operation.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5059,Key migration operation.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5060,Verification operation failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5061,Cryptographic operation.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5062,A kernel-mode cryptographic self test was performed.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5063,A cryptographic provider operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5064,A cryptographic context operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5065,A cryptographic context modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5066,A cryptographic function operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5067,A cryptographic function modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5068,A cryptographic function provider operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5069,A cryptographic function property operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5070,A cryptographic function property modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5071,Key access denied by Microsoft key distribution service.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5120,OCSP Responder Service Started.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5121,OCSP Responder Service Stopped.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5122,A Configuration entry changed in the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5123,A configuration entry changed in the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5124,A security setting was updated on OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5125,A request was submitted to OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5126,Signing Certificate was automatically updated by the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5127,The OCSP Revocation Provider successfully updated the revocation information.,Certification Services,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,DS Access,Information,Security,5136,A directory service object was modified.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,DS Access,Information,Security,5137,A directory service object was created.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,DS Access,Information,Security,5138,A directory service object was undeleted.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,DS Access,Information,Security,5139,A directory service object was moved.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,5140,A network share object was accessed.,File Share,0,1,1,1,1,0,1,1,1,0,In Development,0
-1,DS Access,Information,Security,5141,A directory service object was deleted.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,5142,A network share object was added.,File Share,0,1,0,1,1,0,0,1,1,0,In Development,0
-1,Object Access,Information,Security,5143,A network share object was modified.,File Share,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,5144,A network share object was deleted.,File Share,0,1,0,1,1,0,0,1,1,0,In Development,0
-1,Object Access,Information,Security,5145,A network share object was checked to see whether the client can be granted desired access.,Detailed File Share,0,1,1,1,1,0,0,1,1,0,In Development,0
-0,Object Access,Information,Security,5146,The Windows Filtering Platform has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,High,0
-0,Object Access,Information,Security,5147,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5148,The Windows Filtering Platform has detected a DoS attack and entered a defensive mode; packets associated with this attack will be discarded.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5149,The DoS attack has subsided and normal processing is being resumed.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5150,The Windows Filtering Platform has blocked a packet.,Filtering Platform Connection,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5151,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Connection,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5152,The Windows Filtering Platform blocked a packet.,Filtering Platform Packet Drop,0,1,1,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5153,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,In Development,0
-1,Object Access,Information,Security,5154,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,Filtering Platform Connection,0,1,1,1,0,0,0,1,1,0,In Development,0
-1,Object Access,Information,Security,5155,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,5156,The Windows Filtering Platform has allowed a connection.,Filtering Platform Connection,0,1,1,1,0,0,1,1,1,0,High,0
-1,Object Access,Information,Security,5157,The Windows Filtering Platform has blocked a connection.,Filtering Platform Connection,0,1,1,1,0,0,0,1,0,0,In Development,0
-1,Object Access,Information,Security,5158,The Windows Filtering Platform has permitted a bind to a local port.,Filtering Platform Connection,0,1,0,1,0,0,1,1,0,0,In Development,0
-1,Object Access,Information,Security,5159,The Windows Filtering Platform has blocked a bind to a local port.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,In Development,0
-0,Object Access,Information,Security,5168,Spn check for SMB/SMB2 failed.,File Share,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,5169,A directory service object was modified.,Directory Service Access,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,DS Access,Information,Security,5170,A directory service object was modified during a background cleanup task,Directory Service Access,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,5376,Credential Manager credentials were backed up.,User Account Management,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,5377,Credential Manager credentials were restored from a backup.,User Account Management,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5378,The requested credentials delegation was disallowed by policy.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Account Management,Information,Security,5379,Credential Manager credentials were read.,User Account Management,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Vault,Information,Security,5380,Vault Find Credential,Vault,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Vault,Information,Security,5381,Vault credentials were read,Vault,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Vault,Information,Security,5382,Vault credentials were read,Vault,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5440,The following callout was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5441,The following filter was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5442,The following provider was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5443,The following provider context was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5444,The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5446,A Windows Filtering Platform callout has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5447,A Windows Filtering Platform filter has been changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,1,0,In Development,0
-0,Policy Change,Information,Security,5448,A Windows Filtering Platform provider has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5449,A Windows Filtering Platform provider context has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5450,A Windows Filtering Platform sub-layer has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5451,An IPsec Quick Mode security association was established.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5452,An IPsec Quick Mode security association ended.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5453,An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5456,PAStore Engine applied Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5457,PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5458,PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5459,PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5460,PAStore Engine applied local registry storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5461,PAStore Engine failed to apply local registry storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5462,PAStore Engine failed to apply some rules of the active IPsec policy on the computer. Use the IP Security Monitor snap-in to diagnose the problem.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5463,PAStore Engine polled for changes to the active IPsec policy and detected no changes.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5464,"PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5465,PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5466,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the cached copy of the Active Directory IPsec policy instead. Any changes made to the Active Directory IPsec policy since the last poll could not be applied.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5467,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, and found no changes to the policy. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5468,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the policy, and applied those changes. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5471,PAStore Engine loaded local storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5472,PAStore Engine failed to load local storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5473,PAStore Engine loaded directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5474,PAStore Engine failed to load directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,5477,PAStore Engine failed to add quick mode filter.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5478,IPsec Services has started successfully.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5479,IPsec Services has been shut down successfully. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5480,IPsec Services failed to get the complete list of network interfaces on the computer. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5483,IPsec Services failed to initialize RPC server. IPsec Services could not be started.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5484,IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,Security,5485,IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Wireless 802.1X Auth,Information,Security,5632,A request was made to authenticate to a wireless network.,Other Logon/Logoff Events,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,5633,A request was made to authenticate to a wired network.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Detailed Tracking,Information,Security,5712,A Remote Procedure Call (RPC) was attempted.,RPC Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5857,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,In Development,0
-0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5859,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,In Development,0
-0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5860,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,In Development,0
-1,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5861,Windows WMI Activity,WMI,0,0,1,0,0,1,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5888,An object in the COM+ Catalog was modified.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5889,An object was deleted from the COM+ Catalog.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Object Access,Information,Security,5890,An object was added to the COM+ Catalog.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Information,Security,6144,Security policy in the group policy objects has been applied successfully.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Policy Change,Error,Security,6145,One or more errors occurred while processing security policy in the group policy objects.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6272,Network Policy Server granted access to a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6273,Network Policy Server denied access to a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6274,Network Policy Server discarded the request for a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6275,Network Policy Server discarded the accounting request for a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6276,Network Policy Server quarantined a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6277,Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6278,Network Policy Server granted full access to a user because the host met the defined health policy.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6279,Network Policy Server locked the user account due to repeated failed authentication attempts.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,6280,Network Policy Server unlocked the user account.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,In Development,0
-0,Security,Information,Security,6281,Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification. The invalid hashes could indicate a potential disk device error,System Integrity,0,1,1,1,1,0,0,0,0,0,In Development,0
-0,System,Information,System,6400,BranchCache: Received an incorrectly formatted response while discovering availability of content.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6401,BranchCache: Received invalid data from a peer. Data discarded.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6402,BranchCache: The message to the hosted cache offering it data is incorrectly formatted.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6403,BranchCache: The hosted cache sent an incorrectly formatted response to the client.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6404,BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6405,BranchCache: %2 instance(s) of event id %1 occurred.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6406,%1 registered to Windows Firewall to control filtering for the following: %2,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6407,(blank),Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,6408,Registered product %1 failed and Windows Firewall is now controlling the filtering for %2,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6409,BranchCache: A service connection point object could not be parsed.,Other System Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6410,Code integrity determined that a file does not meet the security requirements to load into a process.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6416,A new external device was recognized by the System,Plug and Play Events,0,1,1,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6417,The FIPS mode crypto selftests succeeded.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,6418,The FIPS mode crypto selftests failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6419,A request was made to disable a device,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6420,A device was disabled.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6421,A request was made to enable a device.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6422,A device was enabled.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6423,The installation of this device is forbidden by system policy,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Information,System,6424,"The installation of this device was allowed, after having previously been forbidden by policy.",Plug and Play Events,0,1,0,1,0,0,0,0,0,0,In Development,0
-0,System,Error,System,7000,The service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.,Service,0,0,1,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7009,Service Control Manager - A timeout was reached,Service,0,0,1,0,0,0,0,0,0,0,In Development,0
-0,System,Error,System,7022,The service hung on starting,Service,0,0,1,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7023,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7024,The service terminated with service-specific error,Service,0,0,1,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7026,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7030,Service Creation Error,Service,0,0,0,0,0,0,0,0,0,1,In Development,0
-0,System,Error,System,7031,Service Crashed,Service,0,0,0,0,1,0,1,0,0,0,In Development,0
-0,System,Error,System,7032,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,System,Error,System,7034,Service Crashed,Service,0,0,1,0,1,0,1,0,0,0,In Development,0
-0,System,Information,System,7035,Service sent a request to stop or start,Service,0,0,1,0,0,0,0,0,0,0,In Development,0
-0,System,Information,System,7036,Service was started or stopped,Service,0,0,1,0,0,0,0,0,1,0,In Development,0
-1,System,Information,System,7040,Service configured to interact with desktop,Service,0,0,1,0,0,0,1,0,0,0,In Development,0
-1,System,Information,System,7045,New Windows Service,Service,0,0,1,0,1,0,1,0,1,1,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8000,Starting a Wireless Connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8001,Successfully connected to a wireless connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Information,Microsoft-Windows-AppLocker/EXE and DLL,8002,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Applocker,Error,Microsoft-Windows-AppLocker/EXE and DLL,8003,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,1
-0,Applocker,Warning,Microsoft-Windows-AppLocker/EXE and DLL,8004,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Information,Microsoft-Windows-AppLocker/MSI and Script,8005,Script or Installer ran,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Error,Microsoft-Windows-AppLocker/MSI and Script,8006,AppLocker Warning,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Warning,Microsoft-Windows-AppLocker/MSI and Script,8007,AppLocker Warning,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8011,Starting a Wireless Connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,8020,Application Ran,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,8023,Application Installed,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Audit,Information,System,8191,Highest System-Defined Audit Message Value,Windows Audit,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Security,Information,VSSAudit,8222,Shadow copy has been created,VSSAudit,0,0,0,0,0,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,10000,Network Connection and Disconnection Status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,10001,Network Connection and Disconnection Status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11000,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11001,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11004,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11005,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11006,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11010,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,12011,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,12012,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,12013,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11002,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-User-PnP,Information,Microsoft-Windows-User-PnP,20001,Driver Management concluded the process to install driver ,,0,0,0,0,0,0,0,0,1,0,In Development,0
-0,Microsoft-Windows-MPRMSG,Success,Remote Access,20250,RADIUS User assigned IP,Network Policy,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-MPRMSG,Success,Remote Access,20274,RADIUS User Authenticated,Network Policy,0,0,0,0,1,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-MPRMSG,Success,Remote Access,20275,RADIUS User Disconnected,Network Policy,0,0,0,0,1,0,0,0,0,0,In Development,0
+ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidance_cim_tagged,ec_guidance_fortuna,ec_guidance_gough,ec_guidance_ms,ec_guidance_nsa,ec_guidance_other,ec_guidance_lombardi,ec_guidance_huntersforge_ossem,ec_guidance_jpcert,ec_guidance_sans_forensics,ec_guidance_asd,observed_volume,duplicate_possible
+0,System or Sysmon,Information,System or Sysmon,1,System Time Changed or Sysmon Process Start,System Integrity,0,0,0,0,1,0,0,0,1,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,1,0,0,In Development,1
+0,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,4,Sysmon service state changed,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
+0,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,6,New Kernel Filter Driver or Driver Loaded,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
+0,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
+0,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,11,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,12,Windows Startup or Registry Object Create or Delete,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,13,Windows Shutdown or Registry Value Set,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,15,File Create Stream Hash,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,18,Windows Update Ready or Pipe Event Connected,Update,1,0,1,0,0,0,0,0,0,0,0,In Development,1
+0,System or Sysmon,Information,System or Sysmon,19,Windows Update Installed or WmiEventFilter activity Detected,Update,1,0,1,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Error,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,20,Windows Update Failed or WmiEventConsumer activity detected,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Sysmon,Information,Sysmon,21,WmiEventConsumerToFilter activity Detected,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Sysmon,Information,Sysmon,22,DNS Event,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,24,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Application,25,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,31,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,34,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-EventCollector,Information,Microsoft-Windows-EventCollector,42,EMET,EMET,0,0,0,0,0,0,0,0,0,0,1,In Development,0
+0,Microsoft-Windows-USB-USBHUB3-Analytic,Information,Microsoft-Windows-USB-USBHUB3-Analytic,43,New Device Information,External Media Detection,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Bits-Client,Information,Microsoft-Windows-Bits-Client,60,Bits Client,Bits Client,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,70,Private Key Accessed,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,80,Processing of a request,,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,81,Sending the request for operation Get to destination host and port,,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,90,X.509 Object,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Security,Information,System,104,The Application or System log was cleared,Clearing Event Logs,0,0,1,0,1,0,0,0,1,0,1,Low,1
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,106,New Task Registered,Task Scheduler Activities,0,0,0,0,1,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,129,Created,Task Scheduler,0,0,1,0,0,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,132,WSMan operation Identify completed successfully,,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,141,Deleted,Task Scheduler,0,0,1,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,142,Task Disabled,Task Scheduler Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,143,Received the response from Network layer),,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,166,The chosen authentication mechanism is Negotiate,,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Powershell,Information,Powershell,169,Remote Connection,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,200,Task Launched,Task Scheduler Activities,0,0,0,0,1,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,201,The operation has been completed,Task Scheduler Activities,0,0,0,0,0,0,0,0,1,0,0,In Development,0
+0,System,Warning,System,219,Failed Kernel Driver Loading,System Integrity,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Sysmon,Information,Sysmon,255,Sysmon Error,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,256,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,257,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-LSA/Operational,Information,Microsoft-Windows-LSA/Operational,300,Group Assigned to new Session,Account Usage,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-PrintService/Operational,Information,Microsoft-Windows-PrintService/Operational,307,Printing Document,Printing Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,400,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,410,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-ApplicationExperience-Program-Telemetry,Information,Microsoft-Windows-ApplicationExperience-Program-Telemetry,500,Compatibility fix applied,,0,0,0,0,0,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-EventCollector,Information,Security,521,Windows events can't forward to Security log,EventCollector,0,0,0,0,0,0,0,0,0,0,1,Low,0
+0,Powershell,Information,Powershell,800,Get-MessageTrackingLog cmdlet,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,High,1
+0,Application,Warning,Application,865,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Warning,Application,866,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Warning,Application,867,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Warning,Application,868,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Warning,Application,882,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,903,New Application Installation,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,904,New Application Installation,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,905,Updated Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,906,Updated Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,907,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,908,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1000,An antimalware scan started.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
+1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1001,An antimalware scan finished.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1002,An antimalware scan was stopped before it finished.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1005,An antimalware scan failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,1006,The antimalware engine found malware or other potentially unwanted software.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1007,The antimalware platform performed an action to protect your system from malware or other potentially unwanted software.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1008,"The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed.",Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1009,The antimalware platform restored an item from quarantine.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1010,The antimalware platform could not restore an item from quarantine.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Information,Application,1022,New MSI File Installed,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Information,Application,1023,New MSI File Installed,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-TerminalServices-RDPClient/Operational,Information,Microsoft-Windows-TerminalServices-RDPClient/Operational,1024,Outbound TS Connect Attempt,Network Policy Server,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Information,Application,1033,New MSI File Installed,Software and Service Installation,0,0,1,0,1,0,0,0,0,0,0,In Development,0
+0,Windows Installer,Information,Installer,1034,Windows Installer removed the product,Installer,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+0,User32,Warning,User32,1074,Shutdown Initiate Failed,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,1100,Event Log Service Shutdown,Clearing Event Logs,1,1,0,0,1,0,0,0,0,0,1,Low,0
+0,Security,Error,Security,1101,Audit events have been dropped by the transport,Windows Audit,1,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,1102,The audit log was cleared,Clearing Event Logs,1,1,1,0,1,0,0,0,0,0,1,Low,0
+0,Security,Information,Security,1104,The security log is now full,Windows Audit,1,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,1105,Event log automatic backup,Windows Audit,1,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,1108,The event logging service encountered an error,Windows Audit,1,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,1116,Detected Malware,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1117,Malware Removed,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1118,Malware Removal Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1119,Malware Removal Fatal Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1125,Event when Network protection fires in Audit-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1126,Event when Network protection fires in Block-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-GroupPolicy,Error,System,1129,Group Policy Application Failed due to Connectivity,Group Policy Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Error,Application,1511,Temp Profile Logon,Account Usage,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Application,Error,Application,1518,Create Profile Failed,Account Usage,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,2001,The antimalware definition update failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,2003,The antimalware engine update failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,2004,There was a problem loading antimalware definitions. The antimalware engine will attempt to load the last-known good set of definitions.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Error,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,2009,Firewall Failed to load Group Policy,Windows Firewall,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Information,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,2033,Firewall Rules Deleted,Windows Firewall,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3001,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,3002,Real-Time Protection failed,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3003,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3004,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,3008,DNS Query Complete,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3010,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,3020,DNS Response Complete,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3023,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4100,System Error,Executing Pipeline,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4101,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
+1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4102,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
+1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4103,Module Logging,Powershell,0,0,1,0,1,0,0,0,0,0,1,High,0
+1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4104,Script Block Logging,Powershell,0,0,1,0,1,0,1,0,0,0,1,In Development,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4105,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4106,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4608,Windows is starting up.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4609,Windows is shutting down.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4610,An authentication package has been loaded by the Local Security Authority.,Security System Extension,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4611,A trusted logon process has been registered with the Local Security Authority.,Security System Extension,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4612,"Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.",System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4614,A notification package has been loaded by the Security Account Manager.,Security System Extension,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4615,Invalid use of LPC port.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4616,The system time was changed.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4618,A monitored security event pattern has occurred.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4621,Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,4622,A security package has been loaded by the Local Security Authority.,Security System Extension,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Logon/Logoff,Information,Security,4624,An account was successfully logged on.,Logon,1,1,1,1,1,0,1,1,1,1,1,In Development,0
+1,Logon/Logoff,Information,Security,4625,An account failed to log on.,Logon,1,1,1,1,1,0,1,1,0,1,1,In Development,1
+0,Logon/Logoff,Information,Security,4626,User/Device claims information.,Logon,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4627,Group membership information.,Group Membership,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4634,An account was logged off.,Logoff,1,1,0,1,1,0,1,0,1,0,1,In Development,0
+0,Logon/Logoff,Information,Security,4646,IKE DoS-Prevention mode started,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4647,User initiated logoff,Logoff,1,1,0,1,0,0,0,0,0,1,0,In Development,0
+1,Logon/Logoff,Information,Security,4648,A logon was attempted using explicit credentials.,Logon,1,1,1,1,1,0,0,1,1,0,1,In Development,0
+0,Logon/Logoff,Information,Security,4649,A replay attack was detected.,Other Logon/Logoff Events,0,1,0,1,0,0,1,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4650,An IPsec Main Mode security association was established. Extended Mode was not enabled. Certificate authentication was not used.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4651,An IPsec Main Mode security association was established. Extended Mode was not enabled. A certificate was used for authentication.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4652,An IPsec Main Mode negotiation failed.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4653,An IPsec Main Mode negotiation failed.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4654,An IPsec Quick Mode negotiation failed.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4655,An IPsec Main Mode security association ended.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Object Access,Information,Security,4656,A handle to an object was requested.,Handle Manipulation,1,1,1,1,0,0,0,1,1,0,0,In Development,0
+1,Object Access,Information,Security,4657,A registry value was modified.,Registry,0,1,1,1,1,0,1,1,0,0,0,In Development,0
+1,Object Access,Information,Security,4658,The handle to an object was closed.,Handle Manipulation,1,1,0,1,0,0,0,1,1,0,0,In Development,0
+0,Object Access,Information,Security,4659,A handle to an object was requested with intent to delete.,SAM,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Object Access,Information,Security,4660,An object was deleted.,SAM,0,1,0,1,0,0,0,1,1,0,0,In Development,0
+1,Object Access,Information,Security,4661,A handle to an object was requested.,SAM,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,DS Access,Information,Security,4662,An operation was performed on an object.,Directory Service Access,0,1,1,1,0,0,0,1,0,0,0,In Development,0
+1,Object Access,Information,Security,4663,An attempt was made to access an object.,Kernel,0,1,1,1,0,0,0,1,1,0,0,High,0
+1,Object Access,Information,Security,4664,An attempt was made to create a hard link.,File System,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Object Access,Information,Security,4665,An attempt was made to create an application client context.,Application Generated,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4666,An application attempted an operation:,Application Generated,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4667,An application client context was deleted.,Application Generated,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4668,An application was initialized.,Application Generated,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Policy Change,Information,Security,4670,Permissions on an object were changed.,Subcategory (special),0,0,0,1,0,0,0,1,0,0,0,In Development,0
+0,Object Access,Information,Security,4671,An application attempted to access a blocked ordinal through the TBS.,Other Object Access Events,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Privilege Use,Information,Security,4672,Special privileges assigned to new logon.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,1,0,0,0,1,0,0,In Development,0
+1,Privilege Use,Information,Security,4673,A privileged service was called.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,0,0,0,1,1,0,0,In Development,0
+1,Privilege Use,Information,Security,4674,An operation was attempted on a privileged object.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,0,1,0,0,0,1,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4675,SIDs were filtered.,Logon,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+1,Detailed Tracking,Information,Security,4688,A new process has been created.,Process Creation,1,0,1,1,1,0,1,1,1,0,1,High,0
+1,Detailed Tracking,Information,Security,4689,A process has exited.,Process Termination,1,0,0,1,1,0,1,1,1,0,1,High,0
+0,Object Access,Information,Security,4690,An attempt was made to duplicate a handle to an object.,Handle Manipulation,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4691,Indirect access to an object was requested.,Other Object Access Events,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,4692,Backup of data protection master key was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,4693,Recovery of data protection master key was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,4694,Protection of auditable protected data was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,4695,Unprotection of auditable protected data was attempted.,DPAPI Activity,0,0,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,4696,A primary token was assigned to process.,Process Creation,1,0,0,1,0,0,0,0,0,0,0,In Development,0
+1,System,Information,Security,4697,A service was installed in the system.,Security System Extension,0,0,0,1,0,0,0,1,0,0,1,Low,0
+1,Object Access,Information,Security,4698,A scheduled task was created.,Other Object Access Events,0,0,1,1,0,0,1,1,1,0,1,Low,0
+1,Object Access,Information,Security,4699,A scheduled task was deleted.,Other Object Access Events,0,0,0,1,0,0,0,1,0,0,1,Low,0
+1,Object Access,Information,Security,4700,A scheduled task was enabled.,Other Object Access Events,0,1,0,1,0,0,0,1,0,0,1,Low,0
+1,Object Access,Information,Security,4701,A scheduled task was disabled.,Other Object Access Events,0,1,0,1,0,0,0,1,0,0,1,Low,0
+1,Object Access,Information,Security,4702,A scheduled task was updated.,Other Object Access Events,0,1,1,1,0,0,0,1,0,0,1,Low,0
+0,Policy Change,Information,Security,4703,A user right was adjusted.,Authorization Policy Change,0,1,1,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4704,A user right was assigned.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4705,A user right was removed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4706,A new trust was created to a domain.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4707,A trust to a domain was removed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4709,IPsec Services was started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4710,IPsec Services was disabled.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4711,PAStore Engine Event,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4712,IPsec Services encountered a potentially serious failure.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4713,Kerberos policy was changed.,Authentication Policy Change,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4714,Encrypted data recovery policy was changed.,Authorization Policy Change,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4715,The audit policy (SACL) on an object was changed.,Audit Policy Change,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4716,Trusted domain information was modified.,Authentication Policy Change,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+1,Policy Change,Information,Security,4717,System security access was granted to an account.,Authentication Policy Change,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Policy Change,Information,Security,4718,System security access was removed from an account.,Authentication Policy Change,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Policy Change,Information,Security,4719,System audit policy was changed.,Audit Policy Change,1,1,1,1,1,0,1,0,0,0,1,In Development,0
+1,Account Management,Information,Security,4720,A user account was created.,User Account Management,1,1,0,1,1,0,0,1,1,1,1,In Development,0
+1,Account Management,Information,Security,4722,A user account was enabled.,User Account Management,1,1,0,1,1,0,0,1,0,1,0,In Development,0
+1,Account Management,Information,Security,4723,An attempt was made to change an account's password.,User Account Management,1,1,0,1,0,0,0,1,0,1,0,In Development,0
+1,Account Management,Information,Security,4724,An attempt was made to reset an account's password.,User Account Management,1,1,0,1,0,0,0,1,0,1,0,In Development,0
+1,Account Management,Information,Security,4725,A user account was disabled.,User Account Management,1,1,0,1,1,0,0,1,0,1,0,In Development,0
+1,Account Management,Information,Security,4726,A user account was deleted.,User Account Management,1,1,0,1,1,0,0,1,0,1,0,In Development,0
+0,Account Management,Information,Security,4727,A security-enabled global group was created.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4728,A member was added to a security-enabled global group.,Security Group Management,0,1,0,1,1,0,0,0,0,1,0,In Development,0
+0,Account Management,Information,Security,4729,A member was removed from a security-enabled global group.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4730,A security-enabled global group was deleted.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4731,A security-enabled local group was created.,Security Group Management,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4732,A member was added to a security-enabled local group.,Security Group Management,0,1,0,1,1,0,0,1,0,1,0,In Development,0
+1,Account Management,Information,Security,4733,A member was removed from a security-enabled local group.,Security Group Management,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4734,A security-enabled local group was deleted.,Security Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4735,A security-enabled local group was changed.,Security Group Management,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+0,Account Management,Information,Security,4737,A security-enabled global group was changed.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4738,A user account was changed.,User Account Management,1,1,0,1,0,0,0,1,0,1,0,In Development,0
+0,Policy Change,Information,Security,4739,Domain Policy was changed.,Authentication Policy Change,1,1,0,1,0,0,0,0,0,0,1,In Development,0
+1,Account Management,Information,Security,4740,A user account was locked out.,User Account Management,1,1,0,1,1,0,0,1,0,1,1,In Development,0
+1,Account Management,Information,Security,4741,A computer account was created.,Computer Account Management,1,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4742,A computer account was changed.,Computer Account Management,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4743,A computer account was deleted.,Computer Account Management,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Account Management,Information,Security,4744,A security-disabled local group was created.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4745,A security-disabled local group was changed.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4746,A member was added to a security-disabled local group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4747,A member was removed from a security-disabled local group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4748,A security-disabled local group was deleted.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4749,A security-disabled global group was created.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4750,A security-disabled global group was changed.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4751,A member was added to a security-disabled global group.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Account Management,Information,Security,4752,A member was removed from a security-disabled global group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4753,A security-disabled global group was deleted.,Distribution Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Account Management,Information,Security,4754,A security-enabled universal group was created.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4755,A security-enabled universal group was changed.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4756,A member was added to a security-enabled universal group.,Security Group Management,0,1,0,1,1,0,0,0,0,1,0,In Development,0
+0,Account Management,Information,Security,4757,A member was removed from a security-enabled universal group.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4758,A security-enabled universal group was deleted.,Security Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4759,A security-disabled universal group was created.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4760,A security-disabled universal group was changed.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4761,A member was added to a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4762,A member was removed from a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4763,A security-disabled universal group was deleted.,Distribution Group Management,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4764,A group’s type was changed.,Security Group Management,0,1,0,1,0,0,0,1,0,0,1,In Development,0
+0,Account Management,Information,Security,4765,SID History was added to an account.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4766,An attempt to add SID History to an account failed.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4767,A user account was unlocked.,User Account Management,1,1,0,1,1,0,0,1,0,1,1,In Development,0
+1,Account Logon,Information,Security,4768,A Kerberos authentication ticket (TGT) was requested.,Kerberos Authentication Service,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Logon,Information,Security,4769,A Kerberos service ticket was requested.,Kerberos Service Ticket Operations,1,1,1,1,1,0,0,1,1,0,0,In Development,0
+1,Account Logon,Information,Security,4770,A Kerberos service ticket was renewed.,Kerberos Service Ticket Operations,1,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Logon,Information,Security,4771,Kerberos pre-authentication failed.,Kerberos Authentication Service,1,1,1,1,0,0,0,1,0,0,0,In Development,0
+0,Account Logon,Information,Security,4772,A Kerberos authentication ticket request failed.,Kerberos Authentication Service,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Logon,Information,Security,4773,A Kerberos service ticket request failed.,Kerberos Authentication Service,1,1,0,1,1,0,0,1,0,0,0,In Development,0
+0,Account Logon,Information,Security,4774,An account was mapped for logon.,Credential Validation,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4775,An account could not be mapped for logon.,Credential Validation,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Logon,Information,Security,4776,The domain controller attempted to validate the credentials for an account.,Credential Validation,1,1,0,1,1,0,0,1,0,0,0,In Development,0
+0,Account Logon,Information,Security,4777,The domain controller failed to validate the credentials for an account.,Credential Validation,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Logon/Logoff,Information,Security,4778,A session was reconnected to a Window Station.,Other Logon/Logoff Events,1,1,0,1,1,0,0,1,0,1,0,In Development,0
+1,Logon/Logoff,Information,Security,4779,A session was disconnected from a Window Station.,Other Logon/Logoff Events,1,1,0,1,1,0,0,1,0,1,0,In Development,0
+0,Account Management,Information,Security,4780,The ACL was set on accounts which are members of administrators groups.,User Account Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4781,The name of an account was changed:,User Account Management,0,1,0,1,1,0,0,1,0,1,0,In Development,0
+0,Account Management,Information,Security,4782,The password hash an account was accessed.,Other Account Management Events,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4783,A basic application group was created.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4784,A basic application group was changed.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4785,A member was added to a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4786,A member was removed from a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4787,A non-member was added to a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4788,A non-member was removed from a basic application group.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4789,A basic application group was deleted.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4790,An LDAP query group was created.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4791,A basic application group was changed.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4792,An LDAP query group was deleted.,Application Group Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4793,The Password Policy Checking API was called.,Other Account Management Events,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4794,An attempt was made to set the Directory Services Restore Mode.,User Account Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4797,An attempt was made to query the existence of a blank password for an account.,User Account Management,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Account Management,Information,Security,4798,A user's local group membership was enumerated.,User Account Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Account Management,Information,Security,4799,A security-enabled local group membership was enumerated.,Security Group Management,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Logon/Logoff,Information,Security,4800,The workstation was locked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,1,0,1,0,In Development,0
+1,Logon/Logoff,Information,Security,4801,The workstation was unlocked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,1,0,1,0,In Development,0
+0,Logon/Logoff,Information,Security,4802,The screen saver was invoked.,Other Logon/Logoff Events,0,1,0,1,0,0,1,0,0,1,0,In Development,0
+0,Logon/Logoff,Information,Security,4803,The screen saver was dismissed.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,1,0,In Development,0
+0,System,Information,Security,4816,RPC detected an integrity violation while decrypting an incoming message.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4817,Auditing settings on an object were changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4818,Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy,Central Access Policy Staging,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4819,Central Access Policies on the machine have been changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4820,A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions.,Kerberos Authentication Service,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4821,"A Kerberos service ticket was denied because the user, device, or both does not meet the access control restrictions.",Kerberos Service Ticket Operations,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4822,NTLM authentication failed because the account was a member of the Protected User group.,Credential Validation,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4823,NTLM authentication failed because access control restrictions are required.,Credential Validation,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Logon,Information,Security,4824,Kerberos preauthentication by using DES or RC4 failed because the account was a member of the Protected User group.,Kerberos Authentication Service,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4825,A user was denied the access to Remote Desktop.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4826,Boot Configuration Data loaded.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,4830,SID History was removed from an account.,User Account Management,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4864,A namespace collision was detected.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4865,A trusted forest information entry was added.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4866,A trusted forest information entry was removed.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4867,A trusted forest information entry was modified.,Authentication Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4868,The certificate manager denied a pending certificate request.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4869,Certificate Services received a resubmitted certificate request.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4870,Certificate Services revoked a certificate.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4871,Certificate Services received a request to publish the certificate revocation list (CRL).,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4872,Certificate Services published the certificate revocation list (CRL).,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4873,A certificate request extension changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4874,One or more certificate request attributes changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4875,Certificate Services received a request to shut down.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4876,Certificate Services backup started.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4877,Certificate Services backup completed.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4878,Certificate Services restore started.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4879,Certificate Services restore completed.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4880,Certificate Services started.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4881,Certificate Services stopped.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4882,The security permissions for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4883,Certificate Services retrieved an archived key.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4884,Certificate Services imported a certificate into its database.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4885,The audit filter for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4886,Certificate Services received a certificate request.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4887,Certificate Services approved a certificate request and issued a certificate.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4888,Certificate Services denied a certificate request.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4889,Certificate Services set the status of a certificate request to pending.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4890,The certificate manager settings for Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4891,A configuration entry changed in Certificate Services.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4892,A property of Certificate Services changed.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4893,Certificate Services archived a key.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4894,Certificate Services imported and archived a key.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4895,Certificate Services published the CA certificate to Active Directory Domain Services.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4896,One or more rows have been deleted from the certificate database.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4897,Role separation enabled,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4898,Certificate Services loaded a template.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4899,A Certificate Services template was updated.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4900,Certificate Services template security was updated.,Certification Services,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4902,The Per-user audit policy table was created.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,1,In Development,0
+0,Policy Change,Information,Security,4904,An attempt was made to register a security event source.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,1,In Development,0
+0,Policy Change,Information,Security,4905,An attempt was made to unregister a security event source.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,1,In Development,0
+0,Policy Change,Information,Security,4906,The CrashOnAuditFail value has changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4907,Auditing settings on object were changed.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4908,Special Groups Logon table modified.,Audit Policy Change,0,1,0,1,0,0,0,0,0,0,1,In Development,0
+0,Policy Change,Information,Security,4909,The local policy settings for the TBS were changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4910,The group policy settings for the TBS were changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4911,Resource attributes of the object were changed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4912,Per User Audit Policy was changed.,Audit Policy Change,1,1,0,1,0,0,1,0,0,0,1,In Development,0
+0,Policy Change,Information,Security,4913,Central Access Policy on the object was changed.,Authorization Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4928,An Active Directory replica source naming context was established.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4929,An Active Directory replica source naming context was removed.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4930,An Active Directory replica source naming context was modified.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4931,An Active Directory replica destination naming context was modified.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4932,Synchronization of a replica of an Active Directory naming context has begun.,Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4933,Synchronization of a replica of an Active Directory naming context has ended.,Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4934,Attributes of an Active Directory object were replicated.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4935,Replication failure begins.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4936,Replication failure ends.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,4937,A lingering object was removed from a replica.,Detailed Directory Service Replication,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4944,The following policy was active when the Windows Firewall started.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4945,A rule was listed when the Windows Firewall started.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4946,A change has been made to Windows Firewall exception list. A rule was added.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,1,0,0,In Development,0
+0,Policy Change,Information,Security,4947,A change has been made to Windows Firewall exception list. A rule was modified.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4948,A change has been made to Windows Firewall exception list. A rule was deleted.,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4949,Windows Firewall settings were restored to the default values.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4950,A Windows Firewall setting has changed.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4951,A rule has been ignored because its major version number was not recognized by Windows Firewall.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4952,Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4953,A rule has been ignored by Windows Firewall because it could not parse the rule.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4954,Windows Firewall Group Policy settings have changed. The new settings have been applied.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4956,Windows Firewall has changed the active profile.,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4957,Windows Firewall did not apply the following rule:,MPSSVC Rule-Level Policy Change,1,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,4958,Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer:,MPSSVC Rule-Level Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,4960,"IPsec dropped an inbound packet that failed an integrity check. If this problem persists, it could indicate a network issue or that packets are being modified in transit to this computer. Verify that the packets sent from the remote computer are the same as those received by this computer. This error might also indicate interoperability problems with other IPsec implementations.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,4961,"IPsec dropped an inbound packet that failed a replay check. If this problem persists, it could indicate a replay attack against this computer.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,4962,IPsec dropped an inbound packet that failed a replay check. The inbound packet had too low a sequence number to ensure it was not a replay.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,4963,IPsec dropped an inbound clear text packet that should have been secured. This is usually due to the remote computer changing its IPsec policy without informing this computer. This could also be a spoofing attack attempt.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4964,Special groups have been assigned to a new logon.,Special Logon,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,4965,"IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI). This is usually caused by malfunctioning hardware that is corrupting packets. If these errors persist, verify that the packets sent from the remote computer are the same as those received by this computer. This error may also indicate interoperability problems with other IPsec implementations. In that case, if connectivity is not impeded, then these events can be ignored.",IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4976,"During Main Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4977,"During Quick Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4978,"During Extended Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4979,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4980,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4981,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4982,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4983,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,4984,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,4985,The state of a transaction has changed.,File System,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,5008,Unexpected Error,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,System,Information,System,5024,The Windows Firewall Service has started successfully.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,System,Information,System,5025,The Windows Firewall Service has been stopped.,Other System Events,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,System,Error,System,5027,The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,5028,The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,5029,The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,5030,The Windows Firewall Service failed to start.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,System,Information,System,5031,The Windows Firewall Service blocked an application from accepting incoming connections on the network.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,System,Information,System,5032,Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,5033,The Windows Firewall Driver has started successfully.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,System,Information,System,5034,The Windows Firewall Driver has been stopped.,Other System Events,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,System,Error,System,5035,The Windows Firewall Driver failed to start.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,5037,The Windows Firewall Driver detected critical runtime error. Terminating.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,5038,Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error.,System Integrity,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5039,A registry key was virtualized.,Registry,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5040,A change has been made to IPsec settings. An Authentication Set was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5041,A change has been made to IPsec settings. An Authentication Set was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5042,A change has been made to IPsec settings. An Authentication Set was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5043,A change has been made to IPsec settings. A Connection Security Rule was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5044,A change has been made to IPsec settings. A Connection Security Rule was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5045,A change has been made to IPsec settings. A Connection Security Rule was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5046,A change has been made to IPsec settings. A Crypto Set was added.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5047,A change has been made to IPsec settings. A Crypto Set was modified.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5048,A change has been made to IPsec settings. A Crypto Set was deleted.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5049,An IPsec Security Association was deleted.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5050,An attempt to programmatically disable the Windows Firewall was rejected because this API is not supported on Windows Vista.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5051,A file was virtualized.,File System,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5056,A cryptographic self test was performed.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5057,A cryptographic primitive operation failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5058,Key file operation.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5059,Key migration operation.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5060,Verification operation failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5061,Cryptographic operation.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5062,A kernel-mode cryptographic self test was performed.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5063,A cryptographic provider operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5064,A cryptographic context operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5065,A cryptographic context modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5066,A cryptographic function operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5067,A cryptographic function modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5068,A cryptographic function provider operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5069,A cryptographic function property operation was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5070,A cryptographic function property modification was attempted.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5071,Key access denied by Microsoft key distribution service.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5120,OCSP Responder Service Started.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5121,OCSP Responder Service Stopped.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5122,A Configuration entry changed in the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5123,A configuration entry changed in the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5124,A security setting was updated on OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5125,A request was submitted to OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5126,Signing Certificate was automatically updated by the OCSP Responder Service.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5127,The OCSP Revocation Provider successfully updated the revocation information.,Certification Services,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,DS Access,Information,Security,5136,A directory service object was modified.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,DS Access,Information,Security,5137,A directory service object was created.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,DS Access,Information,Security,5138,A directory service object was undeleted.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,DS Access,Information,Security,5139,A directory service object was moved.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,Object Access,Information,Security,5140,A network share object was accessed.,File Share,0,1,1,1,1,0,1,1,1,0,1,In Development,0
+1,DS Access,Information,Security,5141,A directory service object was deleted.,Directory Service Changes,0,1,0,1,1,0,0,1,0,0,0,In Development,0
+1,Object Access,Information,Security,5142,A network share object was added.,File Share,0,1,0,1,1,0,0,1,1,0,1,In Development,0
+1,Object Access,Information,Security,5143,A network share object was modified.,File Share,0,1,0,1,0,0,0,1,0,0,1,In Development,0
+1,Object Access,Information,Security,5144,A network share object was deleted.,File Share,0,1,0,1,1,0,0,1,1,0,1,In Development,0
+1,Object Access,Information,Security,5145,A network share object was checked to see whether the client can be granted desired access.,Detailed File Share,0,1,1,1,1,0,0,1,1,0,0,In Development,0
+0,Object Access,Information,Security,5146,The Windows Filtering Platform has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,0,High,0
+0,Object Access,Information,Security,5147,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5148,The Windows Filtering Platform has detected a DoS attack and entered a defensive mode; packets associated with this attack will be discarded.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5149,The DoS attack has subsided and normal processing is being resumed.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5150,The Windows Filtering Platform has blocked a packet.,Filtering Platform Connection,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5151,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Connection,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5152,The Windows Filtering Platform blocked a packet.,Filtering Platform Packet Drop,0,1,1,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5153,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+1,Object Access,Information,Security,5154,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,Filtering Platform Connection,0,1,1,1,0,0,0,1,1,0,0,In Development,0
+1,Object Access,Information,Security,5155,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+1,Object Access,Information,Security,5156,The Windows Filtering Platform has allowed a connection.,Filtering Platform Connection,0,1,1,1,0,0,1,1,1,0,0,High,0
+1,Object Access,Information,Security,5157,The Windows Filtering Platform has blocked a connection.,Filtering Platform Connection,0,1,1,1,0,0,0,1,0,0,0,In Development,0
+1,Object Access,Information,Security,5158,The Windows Filtering Platform has permitted a bind to a local port.,Filtering Platform Connection,0,1,0,1,0,0,1,1,0,0,0,In Development,0
+1,Object Access,Information,Security,5159,The Windows Filtering Platform has blocked a bind to a local port.,Filtering Platform Connection,0,1,0,1,0,0,0,1,0,0,0,In Development,0
+0,Object Access,Information,Security,5168,Spn check for SMB/SMB2 failed.,File Share,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,5169,A directory service object was modified.,Directory Service Access,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,DS Access,Information,Security,5170,A directory service object was modified during a background cleanup task,Directory Service Access,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,5376,Credential Manager credentials were backed up.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,5377,Credential Manager credentials were restored from a backup.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5378,The requested credentials delegation was disallowed by policy.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Account Management,Information,Security,5379,Credential Manager credentials were read.,User Account Management,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Vault,Information,Security,5380,Vault Find Credential,Vault,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Vault,Information,Security,5381,Vault credentials were read,Vault,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Vault,Information,Security,5382,Vault credentials were read,Vault,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5440,The following callout was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5441,The following filter was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5442,The following provider was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5443,The following provider context was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5444,The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5446,A Windows Filtering Platform callout has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5447,A Windows Filtering Platform filter has been changed.,Other Policy Change Events,0,1,0,1,0,0,0,0,1,0,0,In Development,0
+0,Policy Change,Information,Security,5448,A Windows Filtering Platform provider has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5449,A Windows Filtering Platform provider context has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5450,A Windows Filtering Platform sub-layer has been changed.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5451,An IPsec Quick Mode security association was established.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5452,An IPsec Quick Mode security association ended.,IPsec Quick Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5453,An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started.,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5456,PAStore Engine applied Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5457,PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5458,PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5459,PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5460,PAStore Engine applied local registry storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5461,PAStore Engine failed to apply local registry storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5462,PAStore Engine failed to apply some rules of the active IPsec policy on the computer. Use the IP Security Monitor snap-in to diagnose the problem.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5463,PAStore Engine polled for changes to the active IPsec policy and detected no changes.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5464,"PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5465,PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5466,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the cached copy of the Active Directory IPsec policy instead. Any changes made to the Active Directory IPsec policy since the last poll could not be applied.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5467,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, and found no changes to the policy. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5468,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the policy, and applied those changes. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5471,PAStore Engine loaded local storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5472,PAStore Engine failed to load local storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5473,PAStore Engine loaded directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5474,PAStore Engine failed to load directory storage IPsec policy on the computer.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,5477,PAStore Engine failed to add quick mode filter.,Filtering Platform Policy Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5478,IPsec Services has started successfully.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5479,IPsec Services has been shut down successfully. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5480,IPsec Services failed to get the complete list of network interfaces on the computer. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5483,IPsec Services failed to initialize RPC server. IPsec Services could not be started.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5484,IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,Security,5485,IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Wireless 802.1X Auth,Information,Security,5632,A request was made to authenticate to a wireless network.,Other Logon/Logoff Events,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,5633,A request was made to authenticate to a wired network.,Other Logon/Logoff Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Detailed Tracking,Information,Security,5712,A Remote Procedure Call (RPC) was attempted.,RPC Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5857,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,0,In Development,0
+0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5859,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,0,In Development,0
+0,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5860,Windows WMI Activity,WMI,0,0,0,0,0,1,0,0,0,0,0,In Development,0
+1,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,5861,Windows WMI Activity,WMI,0,0,1,0,0,1,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5888,An object in the COM+ Catalog was modified.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5889,An object was deleted from the COM+ Catalog.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Object Access,Information,Security,5890,An object was added to the COM+ Catalog.,Other Object Access Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Information,Security,6144,Security policy in the group policy objects has been applied successfully.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Policy Change,Error,Security,6145,One or more errors occurred while processing security policy in the group policy objects.,Other Policy Change Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6272,Network Policy Server granted access to a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6273,Network Policy Server denied access to a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6274,Network Policy Server discarded the request for a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6275,Network Policy Server discarded the accounting request for a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6276,Network Policy Server quarantined a user.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6277,Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6278,Network Policy Server granted full access to a user because the host met the defined health policy.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6279,Network Policy Server locked the user account due to repeated failed authentication attempts.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Logon/Logoff,Information,Security,6280,Network Policy Server unlocked the user account.,Network Policy Server,0,1,0,1,1,0,0,0,0,0,0,In Development,0
+0,Security,Information,Security,6281,Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification. The invalid hashes could indicate a potential disk device error,System Integrity,0,1,1,1,1,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6400,BranchCache: Received an incorrectly formatted response while discovering availability of content.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6401,BranchCache: Received invalid data from a peer. Data discarded.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6402,BranchCache: The message to the hosted cache offering it data is incorrectly formatted.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6403,BranchCache: The hosted cache sent an incorrectly formatted response to the client.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6404,BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6405,BranchCache: %2 instance(s) of event id %1 occurred.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6406,%1 registered to Windows Firewall to control filtering for the following: %2,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6407,(blank),Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,6408,Registered product %1 failed and Windows Firewall is now controlling the filtering for %2,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6409,BranchCache: A service connection point object could not be parsed.,Other System Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6410,Code integrity determined that a file does not meet the security requirements to load into a process.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6416,A new external device was recognized by the System,Plug and Play Events,0,1,1,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6417,The FIPS mode crypto selftests succeeded.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,6418,The FIPS mode crypto selftests failed.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6419,A request was made to disable a device,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6420,A device was disabled.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6421,A request was made to enable a device.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6422,A device was enabled.,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6423,The installation of this device is forbidden by system policy,Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,6424,"The installation of this device was allowed, after having previously been forbidden by policy.",Plug and Play Events,0,1,0,1,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7000,The service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.,Service,0,0,1,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7009,Service Control Manager - A timeout was reached,Service,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7022,The service hung on starting,Service,0,0,1,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7023,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7024,The service terminated with service-specific error,Service,0,0,1,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7026,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7030,Service Creation Error,Service,0,0,0,0,0,0,0,0,0,1,0,In Development,0
+0,System,Error,System,7031,Service Crashed,Service,0,0,0,0,1,0,1,0,0,0,0,In Development,0
+0,System,Error,System,7032,Windows Service Fails or Crashes,System or Service Failures,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,System,Error,System,7034,Service Crashed,Service,0,0,1,0,1,0,1,0,0,0,0,In Development,0
+0,System,Information,System,7035,Service sent a request to stop or start,Service,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+0,System,Information,System,7036,Service was started or stopped,Service,0,0,1,0,0,0,0,0,1,0,0,In Development,0
+1,System,Information,System,7040,Service configured to interact with desktop,Service,0,0,1,0,0,0,1,0,0,0,0,In Development,0
+1,System,Information,System,7045,New Windows Service,Service,0,0,1,0,1,0,1,0,1,1,1,Low,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8000,Starting a Wireless Connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8001,Successfully connected to a wireless connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/EXE and DLL,8002,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+0,Applocker,Error,Microsoft-Windows-AppLocker/EXE and DLL,8003,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,1,In Development,1
+0,Applocker,Warning,Microsoft-Windows-AppLocker/EXE and DLL,8004,AppLocker Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,1,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/MSI and Script,8005,Script or Installer ran,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Applocker,Error,Microsoft-Windows-AppLocker/MSI and Script,8006,AppLocker Warning,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,1,In Development,0
+0,Applocker,Warning,Microsoft-Windows-AppLocker/MSI and Script,8007,AppLocker Warning,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,1,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,8011,Starting a Wireless Connection,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,8020,Application Ran,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,8021,Application Ran,Application Whitelisting,0,0,0,0,0,0,0,0,0,0,1,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,8022,Application Ran,Application Whitelisting,0,0,0,0,0,0,0,0,0,0,1,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,8023,Application Installed,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,8024,Application Installed,Application Whitelisting,0,0,0,0,0,0,0,0,0,0,1,In Development,0
+0,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,8025,Application Installed,Application Whitelisting,0,0,0,0,0,0,0,0,0,0,1,In Development,0
+0,Audit,Information,System,8191,Highest System-Defined Audit Message Value,Windows Audit,0,1,0,0,0,0,0,0,0,0,0,In Development,0
+0,Security,Information,VSSAudit,8222,Shadow copy has been created,VSSAudit,0,0,0,0,0,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,10000,Network Connection and Disconnection Status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,10001,Network Connection and Disconnection Status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11000,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11001,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11004,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,11005,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11006,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11010,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,12011,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,12012,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,12013,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11002,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-User-PnP,Information,Microsoft-Windows-User-PnP,20001,Driver Management concluded the process to install driver ,,0,0,0,0,0,0,0,0,1,0,0,In Development,0
+0,Microsoft-Windows-MPRMSG,Success,Remote Access,20250,RADIUS User assigned IP,Network Policy,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-MPRMSG,Success,Remote Access,20274,RADIUS User Authenticated,Network Policy,0,0,0,0,1,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-MPRMSG,Success,Remote Access,20275,RADIUS User Disconnected,Network Policy,0,0,0,0,1,0,0,0,0,0,0,In Development,0

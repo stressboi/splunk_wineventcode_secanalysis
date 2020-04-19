@@ -4,14 +4,15 @@
   <fieldset submitButton="false">
     <input type="multiselect" token="authority_token" searchWhenChanged="true">
       <label>Authority</label>
-      <choice value="ec_guidance_ms=1">Microsoft AD</choice>
-      <choice value="ec_guidance_gough=1">Michael Gough</choice>
-      <choice value="ec_guidance_sans_forensics=1">SANS Forensic</choice>
       <choice value="ec_guidance_fortuna=1">Andrea Fortuna</choice>
+      <choice value="ec_guidance_asd=1">ASD</choice>
+      <choice value="ec_guidance_huntersforge_ossem=1">Huntersforge OSSEM</choice>
+      <choice value="ec_guidance_jpcert=1">JP-CERT</choice>
+      <choice value="ec_guidance_gough=1">Michael Gough</choice>
+      <choice value="ec_guidance_ms=1">Microsoft AD</choice>
       <choice value="ec_guidance_lombardi=1">Mike Lombardi</choice>
       <choice value="ec_guidance_nsa=1">NSA</choice>
-      <choice value="ec_guidance_jpcert=1">JP-CERT</choice>
-      <choice value="ec_guidance_huntersforge_ossem=1">Huntersforge OSSEM</choice>
+      <choice value="ec_guidance_sans_forensics=1">SANS Forensic</choice>
       <choice value="ec_guidance_other=1">Other</choice>
       <delimiter> OR </delimiter>
       <change>
@@ -159,7 +160,7 @@
       <title>Count of Codes by Authority ($numselected$ selected)</title>
       <table>
         <search>
-          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$)| fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_jpcert as "JP-CERT",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as "Microsoft AD", ec_guidance_nsa as NSA,ec_guidance_huntersforge_ossem as "Hunters Forge",ec_guidance_sans_forensics as "SANS Forensics Guidance" |transpose |rename column as Category| sort - "row 1" | rename "row 1" as "Total EventCodes" | lookup recommenders_lookup.csv Category | search Category !=ec_guidance*</query>
+          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$)| fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_jpcert as "JP-CERT",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as "Microsoft AD", ec_guidance_nsa as NSA,ec_guidance_huntersforge_ossem as "Hunters Forge",ec_guidance_sans_forensics as "SANS Forensics Guidance" |transpose |rename column as Category| sort - "row 1" | rename "row 1" as "Total EventCodes" | lookup recommenders_lookup.csv Category | search Category !=ec_guidance*</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
@@ -181,11 +182,19 @@
   </row>
   <row>
     <panel>
-      <title>Huntersforge OSSEM ATT&amp;CK Mapping ($numselected$ selected)</title>
+      <html>
+      <h3>
+        <a href="https://docs.google.com/spreadsheets/d/1ow7YRDEDJs67kcKMZZ66_5z1ipJry9QrsDQkjQvizJM/edit#gid=0">Huntersforge Google Sheet with ATT&amp;CK Mapping</a>
+      </h3>
+    </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Huntersforge OSSEM ATT&amp;CK Mapping from above sheet ($numselected$ selected)</title>
       <table>
-        <title>https://github.com/hunters-forge/OSSEM/blob/master/attack_data_sources/README.md</title>
         <search>
-          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$) | search ATT&amp;CK=1 | fields - ec_guidance_cim_tagged | stats values(EventDescription) as "Event Description", values("Event Log") as "Event Log" values(ec_guidance*) as ec_guidance* by EventCode | addtotals ec_guidance* | rename ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_jpcert as "JP-CERT", ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM",ec_guidance_other as "OTHER" | sort - Total</query>
+          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$) | search ATT&amp;CK=1 | fields - ec_guidance_cim_tagged | stats values(EventDescription) as "Event Description", values("Event Log") as "Event Log" values(ec_guidance*) as ec_guidance* by EventCode | addtotals ec_guidance* | rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_jpcert as "JP-CERT", ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM",ec_guidance_other as "OTHER" | sort - Total</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
@@ -194,39 +203,27 @@
         <option name="dataOverlayMode">none</option>
         <option name="drilldown">none</option>
         <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
         <option name="rowNumbers">false</option>
         <option name="totalsRow">false</option>
         <option name="wrap">true</option>
-        <format type="color" field="ec_guidance_fortuna">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="number" field="ec_guidance_gough">
+        <format type="number" field="Total">
           <option name="precision">0</option>
         </format>
-        <format type="color" field="ec_guidance_gough">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
+        <format type="color" field="Total">
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
         </format>
-        <format type="color" field="ec_guidance_lombardi">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_ms">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_nsa">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_other">
-          <colorPalette type="map">{"1":#EC9960}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_sans_forensics">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
+        <format type="color" field="ASD">
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
         </format>
         <format type="color" field="Andrea Fortuna">
           <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
         </format>
         <format type="color" field="Michael Gough">
-          <colorPalette type="minMidMax" maxColor="#FFFFFF" minColor="#006D9C"></colorPalette>
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
         </format>
         <format type="color" field="Microsoft">
@@ -240,197 +237,22 @@
         <format type="color" field="NSA">
           <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="OTHER">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="SANS Forensics Guidance">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="ec_guidance_jpcert">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_fortuna">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="number" field="ec_guidance_gough">
-          <option name="precision">0</option>
-        </format>
-        <format type="color" field="ec_guidance_gough">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_lombardi">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_ms">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_nsa">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_other">
-          <colorPalette type="map">{"1":#EC9960}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_sans_forensics">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="Andrea Fortuna">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Michael Gough">
-          <colorPalette type="minMidMax" maxColor="#FFFFFF" minColor="#006D9C"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Microsoft">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Mike Lombardi">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="NSA">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="OTHER">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="SANS Forensics Guidance">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="ec_guidance_jpcert">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_huntersforge_ossem">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
         </format>
         <format type="color" field="Hunters Forge OSSEM">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_fortuna">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="number" field="ec_guidance_gough">
-          <option name="precision">0</option>
-        </format>
-        <format type="color" field="ec_guidance_gough">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_lombardi">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_ms">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_nsa">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_other">
-          <colorPalette type="map">{"1":#EC9960}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_sans_forensics">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="Andrea Fortuna">
           <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Michael Gough">
-          <colorPalette type="minMidMax" maxColor="#FFFFFF" minColor="#006D9C"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Microsoft">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Mike Lombardi">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="NSA">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="OTHER">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="SANS Forensics Guidance">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="ec_guidance_jpcert">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_fortuna">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="number" field="ec_guidance_gough">
-          <option name="precision">0</option>
-        </format>
-        <format type="color" field="ec_guidance_gough">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_lombardi">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_ms">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_nsa">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_other">
-          <colorPalette type="map">{"1":#EC9960}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_sans_forensics">
-          <colorPalette type="map">{"1":#F1813F}</colorPalette>
-        </format>
-        <format type="color" field="Andrea Fortuna">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Michael Gough">
-          <colorPalette type="minMidMax" maxColor="#FFFFFF" minColor="#006D9C"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Microsoft">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="Mike Lombardi">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="NSA">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="OTHER">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="SANS Forensics Guidance">
-          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
-          <scale type="minMidMax"></scale>
-        </format>
-        <format type="color" field="ec_guidance_jpcert">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="ec_guidance_huntersforge_ossem">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
-        </format>
-        <format type="color" field="Hunters Forge OSSEM">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
         </format>
         <format type="color" field="JP-CERT">
-          <colorPalette type="map">{"0":#FFFFFF,"1":#006D9C}</colorPalette>
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
+        </format>
+        <format type="color" field="OTHER">
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
+        </format>
+        <format type="color" field="SANS Forensics Guidance">
+          <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
         </format>
       </table>
       <html>This table displays, for the current selected authorities, what MITRE ATT&amp;CK mappings exist for that event code (according to Huntersforge OSSEM mapping.)</html>
