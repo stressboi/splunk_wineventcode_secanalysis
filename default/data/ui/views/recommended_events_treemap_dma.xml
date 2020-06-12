@@ -1,5 +1,5 @@
 <form>
-  <label>Recommended Events Treemap (Uses Event Signatures DM)</label>
+  <label>Recommended Events Treemap</label>
     <description>Which events exist in my data that are recommended by various authorities to collect? (Uses Event Signatures DM)</description>
   <fieldset submitButton="true" autoRun="false">
     <input type="time" token="field1">
