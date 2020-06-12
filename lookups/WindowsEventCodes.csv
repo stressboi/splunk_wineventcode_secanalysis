@@ -1,21 +1,21 @@
 ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidance_cim_tagged,ec_guidance_fortuna,ec_guidance_gough,ec_guidance_ms,ec_guidance_nsa,ec_guidance_other,ec_guidance_lombardi,ec_guidance_huntersforge_ossem,ec_guidance_jpcert,ec_guidance_sans_forensics,ec_guidance_asd,observed_volume,duplicate_possible
-0,System or Sysmon,Information,System or Sysmon,1,System Time Changed or Sysmon Process Start,System Integrity,0,0,0,0,1,0,0,0,1,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,1,0,0,In Development,1
-0,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,1,System Time Changed or Sysmon Process Start,System Integrity,0,0,0,0,1,0,0,0,1,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,2,Update Packages Installed,Software and Service Installation,0,0,0,0,1,0,0,0,1,0,0,In Development,1
+1,Sysmon,Information,Sysmon,3,Network connection,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
 0,Sysmon,Information,Sysmon,4,Sysmon service state changed,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
-0,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,6,New Kernel Filter Driver or Driver Loaded,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
-0,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
-0,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,11,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,12,Windows Startup or Registry Object Create or Delete,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,13,Windows Shutdown or Registry Value Set,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,Sysmon,Information,Sysmon,5,Process Terminated,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,6,New Kernel Filter Driver or Driver Loaded,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+1,Sysmon,Information,Sysmon,7,Image Loaded,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,Sysmon,Information,Sysmon,8,Create Remote Thread,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
+1,Sysmon,Information,Sysmon,9,Raw access read,Sysmon,0,0,0,0,0,0,0,0,1,0,0,In Development,1
+1,Sysmon,Information,Sysmon,10,Process Access,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,11,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,12,Windows Startup or Registry Object Create or Delete,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,13,Windows Shutdown or Registry Value Set,Boot Events,0,0,0,0,1,0,0,0,0,0,0,In Development,1
+1,Sysmon,Information,Sysmon,14,Registry Key and Value Rename,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
 0,Sysmon,Information,Sysmon,15,File Create Stream Hash,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,System or Sysmon,Information,System or Sysmon,18,Windows Update Ready or Pipe Event Connected,Update,1,0,1,0,0,0,0,0,0,0,0,In Development,1
+1,Sysmon,Information,Sysmon,17,Pipe Event Created,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+1,System or Sysmon,Information,System or Sysmon,18,Windows Update Ready or Pipe Event Connected,Update,1,0,1,0,0,0,0,0,0,0,0,In Development,1
 0,System or Sysmon,Information,System or Sysmon,19,Windows Update Installed or WmiEventFilter activity Detected,Update,1,0,1,0,1,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Error,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,20,Windows Update Failed or WmiEventConsumer activity detected,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,In Development,1
 0,Sysmon,Information,Sysmon,21,WmiEventConsumerToFilter activity Detected,Sysmon,0,0,0,0,0,0,0,0,0,0,0,In Development,0
@@ -64,8 +64,8 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,906,Updated Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,907,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,908,Removed Application,Software and Service Installation,0,0,0,0,1,0,0,0,0,0,0,In Development,0
-1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1000,An antimalware scan started.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
-1,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1001,An antimalware scan finished.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1000,An antimalware scan started.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1001,An antimalware scan finished.,Windows Defender Activities,0,0,1,0,0,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1002,An antimalware scan was stopped before it finished.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,1005,An antimalware scan failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,1006,The antimalware engine found malware or other potentially unwanted software.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
@@ -107,11 +107,11 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3010,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,3020,DNS Response Complete,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,3023,Code Integrity Check,Kernel Driver Signing,0,0,0,0,1,0,0,0,0,0,0,In Development,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4100,System Error,Executing Pipeline,0,0,1,0,0,0,0,0,0,0,0,In Development,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4101,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4102,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4103,Module Logging,Powershell,0,0,1,0,1,0,0,0,0,0,1,High,0
-1,Powershell,Information,Microsoft-Windows-Powershell/Operational,4104,Script Block Logging,Powershell,0,0,1,0,1,0,1,0,0,0,1,In Development,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4100,System Error,Executing Pipeline,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4101,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4102,Executing Pipeline,Powershell,0,0,1,0,0,0,0,0,0,0,0,High,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4103,Module Logging,Powershell,0,0,1,0,1,0,0,0,0,0,1,High,0
+0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4104,Script Block Logging,Powershell,0,0,1,0,1,0,1,0,0,0,1,In Development,0
 0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4105,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,Powershell,Information,Microsoft-Windows-Powershell/Operational,4106,Exception Raised,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,In Development,0
 0,System,Information,System,4608,Windows is starting up.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
