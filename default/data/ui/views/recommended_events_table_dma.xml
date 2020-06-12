@@ -48,7 +48,7 @@
     <panel>
       <table>
         <search>
-          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where (index=$index_token$ AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
+          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where ($index_token$ AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*
