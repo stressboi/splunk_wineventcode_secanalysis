@@ -125,11 +125,11 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,System,Information,System,4618,A monitored security event pattern has occurred.,System Integrity,0,1,0,1,0,0,0,0,0,0,0,In Development,0
 0,System,Information,System,4621,Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.,Security State Change,0,1,0,1,0,0,0,0,0,0,0,In Development,0
 0,System,Information,System,4622,A security package has been loaded by the Local Security Authority.,Security System Extension,0,1,0,1,0,0,0,0,0,0,0,In Development,0
-1,Logon/Logoff,Information,Security,4624,An account was successfully logged on.,Logon,1,1,1,1,1,0,1,1,1,1,1,In Development,0
-1,Logon/Logoff,Information,Security,4625,An account failed to log on.,Logon,1,1,1,1,1,0,1,1,0,1,1,In Development,1
+1,Logon/Logoff,Information,Security,4624,An account was successfully logged on.,Logon,1,1,1,1,1,0,1,1,1,1,1,High,0
+1,Logon/Logoff,Information,Security,4625,An account failed to log on.,Logon,1,1,1,1,1,0,1,1,0,1,1,Medium,1
 0,Logon/Logoff,Information,Security,4626,User/Device claims information.,Logon,0,1,0,1,0,0,0,0,0,0,0,In Development,0
 0,Logon/Logoff,Information,Security,4627,Group membership information.,Group Membership,0,1,0,1,0,0,0,0,0,0,0,In Development,0
-0,Logon/Logoff,Information,Security,4634,An account was logged off.,Logoff,1,1,0,1,1,0,1,0,1,0,1,In Development,0
+0,Logon/Logoff,Information,Security,4634,An account was logged off.,Logoff,1,1,0,1,1,0,1,0,1,0,1,High,0
 0,Logon/Logoff,Information,Security,4646,IKE DoS-Prevention mode started,IPsec Main Mode,0,1,0,1,0,0,0,0,0,0,0,In Development,0
 0,Logon/Logoff,Information,Security,4647,User initiated logoff,Logoff,1,1,0,1,0,0,0,0,0,1,0,In Development,0
 1,Logon/Logoff,Information,Security,4648,A logon was attempted using explicit credentials.,Logon,1,1,1,1,1,0,0,1,1,0,1,In Development,0
@@ -155,7 +155,7 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Object Access,Information,Security,4668,An application was initialized.,Application Generated,0,1,0,1,0,0,0,0,0,0,0,In Development,0
 1,Policy Change,Information,Security,4670,Permissions on an object were changed.,Subcategory (special),0,0,0,1,0,0,0,1,0,0,0,In Development,0
 0,Object Access,Information,Security,4671,An application attempted to access a blocked ordinal through the TBS.,Other Object Access Events,0,0,0,1,0,0,0,0,0,0,0,In Development,0
-0,Privilege Use,Information,Security,4672,Special privileges assigned to new logon.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,1,0,0,0,1,0,0,In Development,0
+0,Privilege Use,Information,Security,4672,Special privileges assigned to new logon.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,1,0,0,0,1,0,0,High,0
 1,Privilege Use,Information,Security,4673,A privileged service was called.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,1,1,0,0,0,1,1,0,0,In Development,0
 1,Privilege Use,Information,Security,4674,An operation was attempted on a privileged object.,Sensitive Privilege Use / Non Sensitive Privilege Use,1,0,0,1,0,0,0,1,0,0,0,In Development,0
 0,Logon/Logoff,Information,Security,4675,SIDs were filtered.,Logon,0,0,0,1,0,0,0,0,0,0,0,In Development,0
