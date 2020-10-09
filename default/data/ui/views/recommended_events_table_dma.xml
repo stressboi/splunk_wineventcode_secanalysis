@@ -5,8 +5,8 @@
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-24h@h</earliest>
-        <latest>now</latest>
+        <earliest>0</earliest>
+        <latest></latest>
       </default>
     </input>
     <input type="text" token="minrec_token" searchWhenChanged="true">
@@ -29,7 +29,6 @@
       <valuePrefix>source="</valuePrefix>
       <delimiter> OR </delimiter>
       <valueSuffix>"</valueSuffix>
-      <choice value="*">ALL</choice>
     </input>
     <input type="multiselect" token="index_token">
       <label>Indexes</label>
@@ -42,13 +41,20 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
+    </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
     </input>
   </fieldset>
   <row>
     <panel>
       <table>
         <search>
-          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where ($index_token$ AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
+          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where (($index_token$ OR $indexwc_token$) AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*

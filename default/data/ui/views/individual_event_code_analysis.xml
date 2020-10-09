@@ -30,7 +30,7 @@
       <choice value="*">ALL</choice>
       <default>*</default>
     </input>
-    <input type="multiselect" token="index_token">
+     <input type="multiselect" token="index_token">
       <label>Indexes</label>
       <valuePrefix>index=</valuePrefix>
       <delimiter> OR </delimiter>
@@ -41,9 +41,14 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
-      <choice value="*">ALL</choice>
-      <default>*</default>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
     </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
+      </input>
     <input type="text" token="ec_token">
       <label>Event Code</label>
       <default>4688</default>

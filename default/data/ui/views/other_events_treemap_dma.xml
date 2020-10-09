@@ -5,8 +5,8 @@
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-24h@h</earliest>
-        <latest>now</latest>
+        <earliest>0</earliest>
+        <latest></latest>
       </default>
     </input>
     <input type="text" token="minhost_token" searchWhenChanged="true">
@@ -27,7 +27,7 @@
       <valueSuffix>"</valueSuffix>
       <choice value="*">ALL</choice>
     </input>
-    <input type="multiselect" token="index_token">
+   <input type="multiselect" token="index_token">
       <label>Indexes</label>
       <valuePrefix>index=</valuePrefix>
       <delimiter> OR </delimiter>
@@ -38,7 +38,14 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
     </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
+      </input>
   </fieldset>
   <row>
     <panel>

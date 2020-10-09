@@ -1,12 +1,12 @@
 <form>
   <label>Recommended Events Treemap</label>
-    <description>Which events exist in my data that are recommended by various authorities to collect? (Uses Event Signatures DM)</description>
+  <description>Which events exist in my data that are recommended by various authorities to collect? (Uses Event Signatures DM)</description>
   <fieldset submitButton="true" autoRun="false">
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-24h@h</earliest>
-        <latest>now</latest>
+        <earliest>0</earliest>
+        <latest></latest>
       </default>
     </input>
     <input type="text" token="minrec_token" searchWhenChanged="true">
@@ -42,6 +42,13 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
+    </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
     </input>
     <input type="radio" token="viz_option" searchWhenChanged="true">
       <label>Visualization Option</label>
@@ -53,7 +60,7 @@
     <panel>
       <viz type="treemap_app.treemap">
         <search>
-          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where ($index_token$ AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
+          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where (($index_token$ OR $indexwc_token$) AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*
