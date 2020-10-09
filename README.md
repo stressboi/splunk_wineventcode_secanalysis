@@ -6,7 +6,7 @@ Beta 1.2 of Windows Event Code Security Analysis app for Splunk. Direct question
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
-10-08-20: added Splunk UBA event codes from [Splunk docs](https://docs.splunk.com/Documentation/UBA/latest/GetDataIn/WindowsEvents)
+10-08-20: added Splunk UBA event codes from [Splunk docs](https://docs.splunk.com/Documentation/UBA/latest/GetDataIn/WindowsEvents) - thank you @drewchurch
 
 9-14-20: added auto lookup support for XML data sources, added a few new event volume changes to main lookup.
 
