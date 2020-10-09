@@ -22,7 +22,7 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Sysmon,Information,Sysmon,22,DNS Event,Sysmon,0,0,0,0,0,0,0,0,0,0,0,0,In Development,0
 0,Sysmon,Information,Sysmon,23,File Delete,Sysmon,0,0,0,0,0,0,0,0,0,0,0,0,In Development,0
 0,Sysmon,Information,Sysmon,24,Clipboard Event,Sysmon,0,0,0,0,0,0,0,0,0,0,0,0,In Development,1
-0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,24,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,1,0,0,0,In Development,0
+0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,24,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,1,0,0,0,In Development,1
 0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Application,25,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,31,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,34,Windows Update Failed,Windows Update Errors,0,0,0,0,1,0,0,0,0,0,0,0,In Development,0
