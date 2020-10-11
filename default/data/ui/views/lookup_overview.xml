@@ -255,7 +255,7 @@
           <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
         </format>
-        <format type="color" field="Splunk UBA Guidance">
+        <format type="color" field="Splunk UBA">
           <colorPalette type="minMidMax" maxColor="#006D9C" minColor="#FFFFFF"></colorPalette>
           <scale type="minMidMax"></scale>
         </format>
