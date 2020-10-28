@@ -1,12 +1,12 @@
 <form>
   <label>Other Events Treemap</label>
-  <description>Which events are not recommended for security, but we are collecting them anyway?</description>
+  <description>Which events are not recommended for security, but we are collecting them anyway? (Uses Event Signatures DM)</description>
   <fieldset submitButton="true" autoRun="false">
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-24h@h</earliest>
-        <latest>now</latest>
+        <earliest>0</earliest>
+        <latest></latest>
       </default>
     </input>
     <input type="text" token="minhost_token" searchWhenChanged="true">
@@ -27,7 +27,7 @@
       <valueSuffix>"</valueSuffix>
       <choice value="*">ALL</choice>
     </input>
-    <input type="multiselect" token="index_token">
+   <input type="multiselect" token="index_token">
       <label>Indexes</label>
       <valuePrefix>index=</valuePrefix>
       <delimiter> OR </delimiter>
@@ -38,14 +38,20 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
     </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
+      </input>
   </fieldset>
   <row>
     <panel>
       <viz type="treemap_app.treemap">
         <search>
-          <query>($index_token$) (source=WinEventLog* OR source=XmlWinEvent*) ($source_token$)
-| stats dc(host) as NumHosts, values(source) as Source,count by EventCode
+          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where ($index_token$ AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*

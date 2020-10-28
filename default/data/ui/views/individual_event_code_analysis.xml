@@ -30,7 +30,7 @@
       <choice value="*">ALL</choice>
       <default>*</default>
     </input>
-    <input type="multiselect" token="index_token">
+     <input type="multiselect" token="index_token">
       <label>Indexes</label>
       <valuePrefix>index=</valuePrefix>
       <delimiter> OR </delimiter>
@@ -41,9 +41,14 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
-      <choice value="*">ALL</choice>
-      <default>*</default>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
     </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
+      </input>
     <input type="text" token="ec_token">
       <label>Event Code</label>
       <default>4688</default>
@@ -60,7 +65,6 @@
       <chart>
         <search base="baseSearch">
           <query>| timechart count by host</query>
-          <sampleRatio>1</sampleRatio>
         </search>
         <option name="charting.chart">line</option>
         <option name="charting.drilldown">all</option>
@@ -73,7 +77,6 @@
       <single>
         <search base="baseSearch">
           <query>| stats dc(host) as hosts</query>
-          <sampleRatio>1</sampleRatio>
         </search>
         <option name="drilldown">none</option>
         <option name="rangeColors">["0x53a051","0x0877a6","0xf8be34","0xf1813f","0xdc4e41"]</option>
@@ -185,7 +188,7 @@
     <panel>
       <table>
         <search>
-          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_jpcert as "JP-CERT",ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM", ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance" |transpose |rename column as Authority| rename "row 1" as "Recommend" | eval "Recommends?"=if(Recommend==1,"YES","NO") | fields - Recommend</query>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_jpcert as "JP-CERT",ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM", ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_uba as "Splunk UBA" |transpose |rename column as Authority| rename "row 1" as "Recommend" | eval "Recommends?"=if(Recommend==1,"YES","NO") | fields - Recommend</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>

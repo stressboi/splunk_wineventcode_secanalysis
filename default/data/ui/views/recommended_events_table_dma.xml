@@ -1,13 +1,17 @@
 <form>
-  <label>Other Events Treemap</label>
-  <description>Which events are not recommended for security, but we are collecting them anyway?</description>
+  <label>Recommended Events Table</label>
+  <description>Which events exist in my data that are recommended by various authorities to collect? (Uses Event Signatures DM)</description>
   <fieldset submitButton="true" autoRun="false">
     <input type="time" token="field1">
       <label></label>
       <default>
-        <earliest>-24h@h</earliest>
-        <latest>now</latest>
+        <earliest>0</earliest>
+        <latest></latest>
       </default>
+    </input>
+    <input type="text" token="minrec_token" searchWhenChanged="true">
+      <label>At Least This Many Authorities</label>
+      <default>3</default>
     </input>
     <input type="text" token="minhost_token" searchWhenChanged="true">
       <label>At Least This Many Hosts</label>
@@ -25,7 +29,6 @@
       <valuePrefix>source="</valuePrefix>
       <delimiter> OR </delimiter>
       <valueSuffix>"</valueSuffix>
-      <choice value="*">ALL</choice>
     </input>
     <input type="multiselect" token="index_token">
       <label>Indexes</label>
@@ -38,41 +41,47 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
+    </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
     </input>
   </fieldset>
   <row>
     <panel>
-      <viz type="treemap_app.treemap">
+      <table>
         <search>
-          <query>($index_token$) (source=WinEventLog* OR source=XmlWinEvent*) ($source_token$)
-| stats dc(host) as NumHosts, values(source) as Source,count by EventCode
+          <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where (($index_token$ OR $indexwc_token$) AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
 | inputlookup append=t WindowsEventCodes.csv
 | stats values(*) as * by EventCode
 | addtotals ec_*
+| eval Total=Total-1
 | rename Total as "NumRecommenders"
 | fillnull value="0" NumHosts,NumRecommenders
+| fillnull value="Not in Data" Source
 | fillnull value="Not in Lookup"
 | fields - ec*
 | sort - NumHosts
-| rename Source as Level1, EventCode as Level2, count as eventcount
-| search ((NumRecommenders=0) AND (NumHosts&gt;=$minhost_token$))
-| table Level1,Level2,eventcount</query>
+| search ((NumRecommenders&gt;$minrec_token$) AND (NumHosts&gt;=$minhost_token$))</query>
           <earliest>$field1.earliest$</earliest>
           <latest>$field1.latest$</latest>
           <sampleRatio>1</sampleRatio>
         </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="percentagesRow">false</option>
         <option name="refresh.display">progressbar</option>
-        <option name="treemap_app.treemap.colorMode">categorical</option>
-        <option name="treemap_app.treemap.maxCategories">500</option>
-        <option name="treemap_app.treemap.maxColor">#3fc77a</option>
-        <option name="treemap_app.treemap.minColor">#d93f3c</option>
-        <option name="treemap_app.treemap.numOfBins">6</option>
-        <option name="treemap_app.treemap.showLabels">true</option>
-        <option name="treemap_app.treemap.showLegend">false</option>
-        <option name="treemap_app.treemap.showTooltip">true</option>
-        <option name="treemap_app.treemap.useColors">true</option>
-        <option name="treemap_app.treemap.useZoom">true</option>
-      </viz>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <drilldown>
+          <link target="_blank">/app/splunk_wineventcode_secanalysis/individual_event_code_analysis?form.ec_token=$click.value2$</link>
+        </drilldown>
+      </table>
     </panel>
   </row>
 </form>

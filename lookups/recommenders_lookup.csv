@@ -7,3 +7,5 @@ SANS Forensics Guidance,https://isc.sans.edu/forums/diary/Windows+Events+log+for
 Michael Gough,https://www.malwarearchaeology.com/cheat-sheets
 Hunters Forge,https://github.com/hunters-forge/OSSEM/tree/master/attack_data_sources
 JP-CERT,https://www.jpcert.or.jp/english/pub/sr/20170612ac-ir_research_en.pdf
+ASD,https://www.cyber.gov.au/publications/windows-event-logging-and-forwarding
+Splunk UBA,https://docs.splunk.com/Documentation/UBA/latest/GetDataIn/WindowsEvents

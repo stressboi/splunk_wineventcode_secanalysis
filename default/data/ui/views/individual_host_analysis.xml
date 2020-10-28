@@ -2,7 +2,7 @@
   <label>Individual Host Analysis</label>
   <search id="baseSearch">
     <query>
-      ($index_token$) (sourcetype=$sourcetype_sel$) host=$selectedhost$ EventCode>0 | fields *
+      ($index_token$) (sourcetype=$sourcetype_sel$) host=$selectedhost$ EventCode&gt;0| fields *
     </query>
     <earliest>$field1.earliest$</earliest>
     <latest>$field1.latest$</latest>
@@ -41,18 +41,20 @@
         <earliest>0</earliest>
         <latest></latest>
       </search>
-      <choice value="*">ALL</choice>
-      <default>*</default>
+      <choice value="select">Select or provide wildcard</choice>
+      <default>select</default>
     </input>
-    <input type="text" token="selectedhost">
-      <label>Host</label>
-      <default></default>
-    </input>
+    <input type="text" token="indexwc_token">
+      <label>Index Wildcard</label>
+      <prefix>index=</prefix>
+      <default>wildcard_pattern</default>
+      </input>
     <input type="radio" token="sourcetype_sel" searchWhenChanged="true">
       <label>Sourcetype</label>
       <choice value="wineventlog*">wineventlog</choice>
       <choice value="xmlwineventlog*">xmlwineventlog</choice>
-      <default>wineventlog*</default>
+      <default>xmlwineventlog*</default>
+      <initialValue>xmlwineventlog*</initialValue>
     </input>
   </fieldset>
   <row>

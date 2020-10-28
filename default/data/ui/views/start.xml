@@ -1,8 +1,114 @@
-<dashboard stylesheet="home.css">
+<dashboard>
   <label>Windows Event Code Security Analysis</label>
   <row>
     <panel>
       <html>
+                    <style>
+                        #ListOfPageGuidesFirstEntry{
+                            text-size-adjust: 100%;
+                            font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            color: #3c444d;
+                            display: flex;
+                        }
+    
+                        .CardStyles {
+                            text-size-adjust: 100%;
+                            font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: #006eaa;
+                            flex-grow: 1;
+                            flex-basis: 260px;
+                            transition: height 0.2s,width 0.2s,min-width 0.2s,max-width 0.2s,margin 0.2s,box-shadow 0.2s,border-color 0.2s;
+                            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+                            width: 318px;
+                            margin: 5px;
+                            border: 1px solid #e1e6eb;
+                            background: white;
+                            min-height: 200px;
+                            overflow: hidden;
+                            clear: both;
+                            position: relative;
+                            display: inline-block;
+                        }
+                        .BodyStyles {
+                            text-size-adjust: 100%;
+    font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    color: #3c444d;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    display: table;
+                        }
+                        .PageGuideImg {
+                            text-size-adjust: 100%;
+    font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    margin-left: 10px;
+    color: rgb(92, 192, 92);
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    flex: 0 0 auto;
+    vertical-align: super;
+    height: 0.6575em;
+                        }
+                        .PageGuideDescription {
+                            text-size-adjust: 100%;
+    font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    color: #3c444d;
+    height: 100%;
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    margin-left: 20px;
+    text-align: left;
+    min-height: 200px;
+                        }
+                        .HeadingStyles {
+                            text-size-adjust: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    text-transform: none;
+    text-rendering: optimizelegibility;
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: bolder !important;
+    line-height: 20px;
+    color: #3c444d !important;
+                        }
+                        .ParagraphStyles {
+                            text-size-adjust: 100%;
+    font-family: Splunk Platform Sans,Proxima Nova,Roboto,Droid,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    text-align: left;
+    margin: 0 0 10px;
+    color: #3c444d;
+    padding: 0;
+                        }
+                    </style>
                 <div id="ListOfPageGuidesFirstEntry">
           <a href="../splunk_wineventcode_secanalysis/lookup_overview?form.authority_token=ec_guidance_ms%3D1&amp;form.authority_token=ec_guidance_gough%3D1&amp;form.authority_token=ec_guidance_sans_forensics%3D1&amp;form.authority_token=ec_guidance_nsa%3D1&amp;hideFilters=false" class="PageGuide CardStyles" title="">
                         <div class="BodyStyles">
@@ -10,7 +116,7 @@
                                 <i class="icon-list"/>
                             </div>
                             <div class="PageGuideDescription" data-id="content">
-                                <h1 class="HeadingStyles">Lookup Overview</h1>
+                                <h2 class="HeadingStyles">Lookup Overview</h2>
                                 <p class="ParagraphStyles">
                                     <ul>
                                         <li>View summarized recommendations from Authorities</li>
@@ -21,14 +127,14 @@
                             </div>
                         </div>
                     </a>
-          <a href="../splunk_wineventcode_secanalysis/recommended_events_table?form.field1.earliest=1564617600&amp;form.field1.latest=1567296000&amp;form.minrec_token=3&amp;form.minhost_token=1&amp;form.source_token=WinEventLog%3ASecurity&amp;form.index_token=main" class="PageGuide CardStyles">
+          <a href="../splunk_wineventcode_secanalysis/recommended_events_table_dma?form.field1.earliest=1564617600&amp;form.field1.latest=1567296000&amp;form.minrec_token=3&amp;form.minhost_token=1&amp;form.source_token=WinEventLog%3ASecurity&amp;form.index_token=main" class="PageGuide CardStyles">
                         <div class="BodyStyles">
                             <div class="PageGuideImg">
                                 
                                     <i class="icon-table"/>
                             </div>
                             <div class="PageGuideDescription" data-id="education">
-                                <h1 class="HeadingStyles">Table Analysis</h1>
+                                <h2 class="HeadingStyles">Table Analysis</h2>
                                 <p class="ParagraphStyles">
                                     <ul>
                                         <li>View your event code data in tables</li>
@@ -47,7 +153,7 @@
                                     <i class="icon-list"/>
                             </div>
                             <div class="PageGuideDescription" data-id="education">
-                                <h1 class="HeadingStyles">Host Analysis</h1>
+                                <h2 class="HeadingStyles">Host Analysis</h2>
                                 <p class="ParagraphStyles">
                                     <ul>
                                         <li>View event code details for a single host</li>
@@ -58,17 +164,17 @@
                             </div>
                         </div>
                     </a>
-          <a href="../splunk_wineventcode_secanalysis/recommended_events_treemap?form.field1.earliest=1564617600&amp;form.field1.latest=1567296000&amp;form.minrec_token=3&amp;form.minhost_token=1&amp;form.source_token=WinEventLog%3ASecurity&amp;form.index_token=main&amp;form.viz_option=table%20Level1%2CLevel2%2CNumHosts%2Ceventcount" class="PageGuide CardStyles lastSelected">
+          <a href="../splunk_wineventcode_secanalysis/recommended_events_treemap_dma?form.field1.earliest=1564617600&amp;form.field1.latest=1567296000&amp;form.minrec_token=3&amp;form.minhost_token=1&amp;form.source_token=WinEventLog%3ASecurity&amp;form.index_token=main&amp;form.viz_option=table%20Level1%2CLevel2%2CNumHosts%2Ceventcount" class="PageGuide CardStyles lastSelected">
                         <div class="BodyStyles">
                             <div class="PageGuideImg">
                                     <i class="icon-bar-stacked-100"/>
                             </div>
                             <div class="PageGuideDescription" data-id="productionalize">
-                                <h1 class="HeadingStyles">Treemap Analysis</h1>
+                                <h2 class="HeadingStyles">Treemap Analysis</h2>
                                 <p class="ParagraphStyles">
                                     <ul>
                                         <li>Visualize recommended events in a treemap</li>
-                                        <li>Select Indexes  and Sourcetypes</li>
+                                        <li>Select Indexes and Sourcetypes</li>
                                         <li>View by # of Recommending Sources</li>
                                     </ul>
                                 </p>
@@ -87,8 +193,10 @@
         <b>About This App</b>
       </h2>
       <p>
-          This beta app allows a Splunk admin or security analyst to make better decisions about which Windows Event Codes are most important for traditional security use cases such as security investigation, incident response, and advanced threat hunting. Recommendations from eight different security researchers/organizations have been included in the app via a lookup table, encompassing <b>576</b> different events, most of which are from the Windows Security event log. Start with the Lookup Overview above to get a feel for the event codes and recommendations, and drill down on any event codes to see the details of that event code in your Splunk instance. You may also interact with your Windows Event Code data in a tabular (Table Analysis) and graphical (Treemap Analysis) format. Finally, you can pick individual hosts and see which Event Codes are being collected from that host, and compare those codes against recommendations and ingest levels.
+          This app allows a Splunk admin or security analyst to make better decisions about which Windows Event Codes are most important for traditional security use cases such as security investigation, incident response, and advanced threat hunting. Recommendations from eight different security researchers/organizations have been included in the app via a lookup table, encompassing <b>584</b> different events, most of which are from the Windows Security event log. Start with the Lookup Overview above to get a feel for the event codes and recommendations, and drill down on any event codes to see the details of that event code in your Splunk instance. You may also interact with your Windows Event Code data in a tabular (Table Analysis) and graphical (Treemap Analysis) format. Finally, you can pick individual hosts and see which Event Codes are being collected from that host, and compare those codes against recommendations and ingest levels.
         </p>
+        <p>For a recently updated bit of guidance on the consumption of Windows events, check out the Australian Signals Directorate article on <a href="https://www.cyber.gov.au/publications/windows-event-logging-and-forwarding">Windows Event Logging and Forwarding.</a> As of April 2020 the ASD guidance is included as the latest authority in this app.</p>
+        <p>As of June 2020 (v1.2) this app requires that you install and configure <a href="https://splunkbase.splunk.com/app/1621/">CIM 4.14+</a> so that the Event Signatures datamodel can be used. Note that <a href="https://splunkbase.splunk.com/app/742/">Windows TA 8.0+</a> provides support for this datamodel.</p>
     </html>
     </panel>
   </row>
