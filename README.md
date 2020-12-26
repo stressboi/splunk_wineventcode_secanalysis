@@ -2,11 +2,13 @@
 
 REQUIRES COMMON INFORMATION MODEL 4.14+ with properly populated signature_id field!
 
-Beta 1.3 of Windows Event Code Security Analysis app for Splunk. Direct questions to brodsky@splunk.com.
+Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct questions to brodsky@splunk.com.
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo.
+
+12-25-20: added Golden SAML event code guidance
 
 10-09-20: added an option to specify index wildcards
 

@@ -188,7 +188,7 @@
     <panel>
       <table>
         <search>
-          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_jpcert as "JP-CERT",ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM", ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_uba as "Splunk UBA" |transpose |rename column as Authority| rename "row 1" as "Recommend" | eval "Recommends?"=if(Recommend==1,"YES","NO") | fields - Recommend</query>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$ec_token$ | fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as Microsoft, ec_guidance_jpcert as "JP-CERT",ec_guidance_huntersforge_ossem as "Hunters Forge OSSEM", ec_guidance_nsa as NSA,ec_guidance_sans_forensics as "SANS Forensics Guidance",ec_guidance_uba as "Splunk UBA",ec_guidance_gsaml as "Golden SAML" |transpose |rename column as Authority| rename "row 1" as "Recommend" | eval "Recommends?"=if(Recommend==1,"YES","NO") | fields - Recommend</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
