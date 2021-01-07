@@ -8,6 +8,8 @@ are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo.
 
+1-07-20: updated lookup for code 1007.
+
 12-25-20: added Golden SAML event code guidance.
 
 10-09-20: added an option to specify index wildcards.
