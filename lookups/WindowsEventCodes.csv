@@ -49,11 +49,11 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,256,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,257,DNS Request/Response,DNS/Directory Services,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-LSA/Operational,Information,Microsoft-Windows-LSA/Operational,300,Group Assigned to new Session,Account Usage,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-ADFS/Audit,Informational,Security,307,The Federation Service configuration was changed,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,Low,1
+0,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,307,The Federation Service configuration was changed,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,Low,1
 0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,400,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,410,New Mass Storage Installation,External Media Detection,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-ApplicationExperience-Program-Telemetry,Information,Microsoft-Windows-ApplicationExperience-Program-Telemetry,500,Compatibility fix applied,,0,0,0,0,0,0,0,0,1,0,0,0,0,In Development,0
-0,Microsoft-Windows-ADFS/Audit,Informational,Security,510,Long Text,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,Low,0
+0,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,510,Long Text,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,Low,0
 0,Microsoft-Windows-EventCollector,Information,Security,521,Windows events can't forward to Security log,EventCollector,0,0,0,0,0,0,0,0,0,0,1,0,0,Low,0
 0,Powershell,Information,Powershell,800,Get-MessageTrackingLog cmdlet,PowerShell Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,High,1
 0,Application,Warning,Application,865,SRP Block,Application Whitelisting,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
@@ -95,8 +95,8 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1125,Event when Network protection fires in Audit-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1126,Event when Network protection fires in Block-mode.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,1
 0,Microsoft-Windows-GroupPolicy,Error,System,1129,Group Policy Application Failed due to Connectivity,Group Policy Errors,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-ADFS/Audit,Informational,Security,1200,Application Token Success,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,High,0
-0,Microsoft-Windows-ADFS/Audit,Informational,Security,1202,Fresh Credential Validation Success,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,High,0
+0,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,1200,Application Token Success,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,High,0
+0,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,1202,Fresh Credential Validation Success,ADFS Audit,0,0,0,0,0,0,0,0,0,0,0,0,1,High,0
 0,Application,Error,Application,1511,Temp Profile Logon,Account Usage,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Application,Error,Application,1518,Create Profile Failed,Account Usage,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,2001,The antimalware definition update failed.,Windows Defender Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
