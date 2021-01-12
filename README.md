@@ -6,7 +6,7 @@ Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct quest
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
-If you want a .spl version of this look in the root of this repo.
+If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
 
 1-12-20: Fixed a bug with missing host input, fixed drilldowns from timecharts.
 
