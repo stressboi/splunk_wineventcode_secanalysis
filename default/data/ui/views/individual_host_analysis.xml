@@ -48,7 +48,11 @@
       <label>Index Wildcard</label>
       <prefix>index=</prefix>
       <default>wildcard_pattern</default>
-      </input>
+    </input>
+	  <input type="text" token="selectedhost">
+      <label>Host</label>
+      <default>*</default>
+    </input>
     <input type="radio" token="sourcetype_sel" searchWhenChanged="true">
       <label>Sourcetype</label>
       <choice value="wineventlog*">wineventlog</choice>
