@@ -49,7 +49,7 @@
       <prefix>index=</prefix>
       <default>wildcard_pattern</default>
     </input>
-	  <input type="text" token="selectedhost">
+	<input type="text" token="selectedhost">
       <label>Host</label>
       <default>*</default>
     </input>
