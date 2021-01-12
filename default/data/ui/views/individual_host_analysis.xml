@@ -70,6 +70,9 @@
         <option name="charting.chart">line</option>
         <option name="charting.drilldown">none</option>
         <option name="refresh.display">progressbar</option>
+		<drilldown>
+          <link target="_blank">search?q=($index_token$)%20(sourcetype=$sourcetype_sel$)%20host=$selectedhost$%20EventCode=$click.name2$&amp;earliest=$field1.earliest$&amp;latest=$field1.latest$</link>
+        </drilldown>
       </chart>
     </panel>
   </row>
