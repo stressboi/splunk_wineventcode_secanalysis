@@ -8,6 +8,8 @@ are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
 
+1-27-20: Fixed lookup link to ACSC guidance.
+
 1-12-20: Fixed a bug with missing host input, fixed drilldowns from timecharts.
 
 1-07-20: updated lookup for code 1007,1200,1202,307,510.
