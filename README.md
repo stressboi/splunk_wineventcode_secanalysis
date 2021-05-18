@@ -7,6 +7,7 @@ Thanks to all security researchers that provided public info on event code recom
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
+(5-17-21: have been asked by several to get this on Splunkbase - will do that shortly...)
 
 05-17-21: Added Defender event codes to lookup; fixed readme format. Thank you Drew Church!
 
