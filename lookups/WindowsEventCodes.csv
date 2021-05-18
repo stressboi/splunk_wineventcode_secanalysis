@@ -237,7 +237,7 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Account Management,Information,Security,4761,A member was added to a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,1,0,In Development,0
 0,Account Management,Information,Security,4762,A member was removed from a security-disabled universal group.,Distribution Group Management,0,1,0,1,0,0,0,0,0,0,0,0,0,In Development,0
 0,Account Management,Information,Security,4763,A security-disabled universal group was deleted.,Distribution Group Management,0,1,0,0,0,0,0,0,0,0,0,1,0,In Development,0
-1,Account Management,Information,Security,4764,A group’s type was changed.,Security Group Management,0,1,0,1,0,0,0,1,0,0,1,0,0,In Development,0
+1,Account Management,Information,Security,4764,A group's type was changed.,Security Group Management,0,1,0,1,0,0,0,1,0,0,1,0,0,In Development,0
 0,Account Management,Information,Security,4765,SID History was added to an account.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,0,0,In Development,0
 0,Account Management,Information,Security,4766,An attempt to add SID History to an account failed.,User Account Management,0,1,0,1,1,0,0,0,0,0,0,0,0,In Development,0
 1,Account Management,Information,Security,4767,A user account was unlocked.,User Account Management,1,1,0,1,1,0,0,1,0,1,1,1,0,In Development,0
@@ -582,7 +582,12 @@ ATT&CK,Category,Level,Event Log,EventCode,EventDescription,Subcategory,ec_guidan
 0,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,12012,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,12013,Wireless Authentication Started and Failed,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,11002,Wireless association status,Mobile Device Activities,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
-0,Microsoft-Windows-User-PnP,Information,Microsoft-Windows-User-PnP,20001,Driver Management concluded the process to install driver ,,0,0,0,0,0,0,0,0,1,0,0,0,0,In Development,0
+0,Microsoft-Windows-User-PnP,Information,Microsoft-Windows-User-PnP,20001,Driver Management concluded the process to install driver,,0,0,0,0,0,0,0,0,1,0,0,0,0,In Development,0
 0,Microsoft-Windows-MPRMSG,Success,Remote Access,20250,RADIUS User assigned IP,Network Policy,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-MPRMSG,Success,Remote Access,20274,RADIUS User Authenticated,Network Policy,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
 0,Microsoft-Windows-MPRMSG,Success,Remote Access,20275,RADIUS User Disconnected,Network Policy,0,0,0,0,1,0,0,0,0,0,0,0,0,In Development,0
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,5007,Event when settings are changed,Windows Defender Activities,0,0,0,0,0,0,0,0,0,0,0,0,0,High,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1124,Audit Controlled folder access event,Windows Defender Activities,0,0,0,0,0,0,0,0,0,0,0,0,0,High,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1123,Blocked Controlled folder access event,Windows Defender Activities,0,0,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1127,Blocked Controlled folder access sector write block event,Windows Defender Activities,0,0,0,0,0,0,0,0,0,0,0,0,0,In Development,1
+0,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,1128,Audited Controlled folder access sector write block event,Windows Defender Activities,0,0,0,0,0,0,0,0,0,0,0,0,0,In Development,1
