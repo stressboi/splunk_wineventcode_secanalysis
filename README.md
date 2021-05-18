@@ -8,7 +8,7 @@ are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
 
-05-17-21: Added Defender event codes to lookup; fixed readme format.
+05-17-21: Added Defender event codes to lookup; fixed readme format. Thank you Drew Church!
 
 01-27-21: Fixed lookup link to ACSC guidance.
 
